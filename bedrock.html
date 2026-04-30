@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bedrock Suites | Chanan Property Ventures</title>
+  <meta name="description" content="Bedrock Suites — Premium residential apartments Units 80 & 81 by Chanan Property Ventures.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='16' width='100' height='100' fill='%23E8722A'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>C</text></svg>">
+  <style>
+    .page-hero{min-height:50vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:100px}
+    .page-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80') center/cover no-repeat}
+    .page-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(250,250,250,0.92),rgba(247,247,248,0.85))}
+    .page-hero .container{position:relative;z-index:1}
+    .page-hero h1{font-size:clamp(32px,4vw,56px);margin-bottom:12px}
+    .page-hero h1 .accent{color:var(--orange)}
+    .page-hero p{font-size:17px;color:var(--grey-400);max-width:600px;line-height:1.8}
+    .brand-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(232,114,42,0.1);border:1px solid rgba(232,114,42,0.2);border-radius:50px;font-size:13px;font-weight:600;color:var(--orange);margin-bottom:20px}
+    .unit-section{padding:80px 0}
+    .unit-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start;margin-bottom:80px}
+    .unit-layout.reverse{direction:rtl}.unit-layout.reverse>*{direction:ltr}
+    .unit-gallery{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .unit-gallery img{width:100%;height:400px;object-fit:cover;transition:var(--transition)}
+    .unit-gallery:hover img{transform:scale(1.03)}
+    .unit-details h3{font-size:28px;margin-bottom:8px}
+    .unit-details .subtitle{color:var(--orange);font-size:13px;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
+    .unit-details p{color:var(--grey-400);line-height:1.8;margin-bottom:20px}
+    .amenities-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px}
+    .amenity{display:flex;align-items:center;gap:8px;padding:10px 14px;background:var(--glass);border:1px solid var(--glass-border);border-radius:var(--radius-sm);font-size:13px;color:var(--grey-300)}
+    .unit-price{font-size:28px;font-weight:800;color:var(--orange);font-family:'Inter',sans-serif;margin-bottom:20px}
+    .unit-price small{font-size:14px;color:var(--grey-400);font-weight:400}
+    .gallery-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
+    .gallery-thumbs img{height:100px;border-radius:var(--radius-sm);cursor:pointer;transition:var(--transition);border:2px solid transparent}
+    .gallery-thumbs img:hover{border-color:var(--orange)}
+    @media(max-width:768px){.unit-layout,.unit-layout.reverse{grid-template-columns:1fr;direction:ltr}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">C</div><div class="nav-logo-text">CHANAN<span>.</span></div></a>
+    <ul class="nav-links">
+      <li><a href="honeycomb.html">Honeycomb Suites</a></li>
+      <li><a href="bedrock.html" style="color:var(--orange)">Bedrock Suites</a></li>
+      <li><a href="vineyard.html">Vineyard Luxury</a></li>
+      <li><a href="index.html#developments">Developments</a></li>
+      <li><a href="index.html#trust">Trust Vault</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Get In Touch</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close">✕</button>
+  <a href="honeycomb.html">Honeycomb Suites</a><a href="bedrock.html">Bedrock Suites</a><a href="vineyard.html">Vineyard Luxury</a>
+  <a href="index.html#developments">Developments</a><a href="index.html#trust">Trust Vault</a><a href="index.html#contact">Contact</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <span class="brand-badge">🏗️ Residential Collection</span>
+    <h1>Bedrock <span class="accent">Suites</span></h1>
+    <p>Premium residential apartments designed for modern living. Spacious interiors, high-quality finishes, and a prime location — your next home awaits.</p>
+  </div>
+</section>
+
+<section class="unit-section">
+  <div class="container">
+    <!-- Unit 80 -->
+    <div class="unit-layout reveal">
+      <div class="unit-gallery">
+        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Bedrock Suite 80" id="main80">
+        <div class="gallery-thumbs">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=300&q=80" alt="Suite 80" onclick="document.getElementById('main80').src=this.src.replace('w=300','w=800')">
+          <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=300&q=80" alt="Suite 80 Kitchen" onclick="document.getElementById('main80').src=this.src.replace('w=300','w=800')">
+          <img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=300&q=80" alt="Suite 80 Bath" onclick="document.getElementById('main80').src=this.src.replace('w=300','w=800')">
+        </div>
+      </div>
+      <div class="unit-details">
+        <div class="subtitle">Unit 80</div>
+        <h3>The Executive Apartment</h3>
+        <p>A generous two-bedroom apartment with premium stone finishes, an open-plan living area, and a fully fitted modern kitchen. Designed for professionals and families who value space and comfort.</p>
+        <div class="amenities-grid">
+          <div class="amenity">🛏️ 2 Bedrooms</div>
+          <div class="amenity">🚿 2 Bathrooms</div>
+          <div class="amenity">🍳 Full Kitchen</div>
+          <div class="amenity">🅿️ Parking Bay</div>
+          <div class="amenity">📶 Fiber Internet</div>
+          <div class="amenity">🧺 In-Unit Laundry</div>
+          <div class="amenity">🏋️ Gym Access</div>
+          <div class="amenity">🔒 24/7 Security</div>
+        </div>
+        <div class="unit-price">KES 45,000 <small>/month</small></div>
+        <a href="index.html#contact" class="btn-primary">Inquire Now →</a>
+      </div>
+    </div>
+
+    <!-- Unit 81 -->
+    <div class="unit-layout reverse reveal">
+      <div class="unit-gallery">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Bedrock Suite 81" id="main81">
+        <div class="gallery-thumbs">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=300&q=80" alt="Suite 81" onclick="document.getElementById('main81').src=this.src.replace('w=300','w=800')">
+          <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?w=300&q=80" alt="Suite 81 Living" onclick="document.getElementById('main81').src=this.src.replace('w=300','w=800')">
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?w=300&q=80" alt="Suite 81 Bedroom" onclick="document.getElementById('main81').src=this.src.replace('w=300','w=800')">
+        </div>
+      </div>
+      <div class="unit-details">
+        <div class="subtitle">Unit 81</div>
+        <h3>The Comfort Residence</h3>
+        <p>A well-designed two-bedroom apartment with warm tones, ample natural lighting, and thoughtful layouts. An ideal home base with all the essentials for comfortable urban living.</p>
+        <div class="amenities-grid">
+          <div class="amenity">🛏️ 2 Bedrooms</div>
+          <div class="amenity">🚿 1 Bathroom</div>
+          <div class="amenity">🍳 Full Kitchen</div>
+          <div class="amenity">🅿️ Parking Bay</div>
+          <div class="amenity">📶 Fiber Internet</div>
+          <div class="amenity">🧺 Laundry Area</div>
+          <div class="amenity">🌳 Balcony</div>
+          <div class="amenity">🔒 24/7 Security</div>
+        </div>
+        <div class="unit-price">KES 40,000 <small>/month</small></div>
+        <a href="index.html#contact" class="btn-primary">Inquire Now →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
+      <div class="footer-socials"><a href="#">📷</a><a href="#">🐦</a><a href="#">💼</a><a href="#">💬</a></div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

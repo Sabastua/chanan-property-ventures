@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vineyard Luxury Homes | Chanan Property Ventures</title>
+  <meta name="description" content="Vineyard House — The flagship luxury residence by Chanan Property Ventures. Exclusive high-end living at its finest.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='16' width='100' height='100' fill='%23E8722A'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>C</text></svg>">
+  <style>
+    .page-hero{min-height:60vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:100px}
+    .page-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1920&q=80') center/cover no-repeat}
+    .page-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(250,250,250,0.90),rgba(247,247,248,0.82))}
+    .page-hero .container{position:relative;z-index:1}
+    .page-hero h1{font-size:clamp(36px,5vw,64px);margin-bottom:12px}
+    .page-hero h1 .accent{color:var(--orange)}
+    .page-hero p{font-size:18px;color:var(--grey-400);max-width:640px;line-height:1.8}
+    .brand-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(232,114,42,0.1);border:1px solid rgba(232,114,42,0.2);border-radius:50px;font-size:13px;font-weight:600;color:var(--orange);margin-bottom:20px}
+    .vineyard-section{padding:80px 0}
+    .full-gallery{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:300px 300px;gap:12px;border-radius:var(--radius);overflow:hidden;margin-bottom:60px;box-shadow:var(--shadow)}
+    .full-gallery img{width:100%;height:100%;object-fit:cover;transition:var(--transition)}
+    .full-gallery img:hover{transform:scale(1.03)}
+    .full-gallery img:first-child{grid-row:1/3}
+    .features-section{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin-bottom:60px}
+    .feature-block h3{font-size:28px;margin-bottom:16px}
+    .feature-block p{color:var(--grey-400);line-height:1.8;margin-bottom:24px}
+    .amenities-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .amenity-item{display:flex;align-items:center;gap:10px;padding:14px 18px;background:var(--charcoal-light);border:1px solid var(--glass-border);border-radius:var(--radius-sm);font-size:14px;color:var(--grey-300);transition:var(--transition)}
+    .amenity-item:hover{border-color:rgba(232,114,42,0.3);transform:translateY(-2px)}
+    .amenity-item .icon{font-size:22px}
+    .highlight-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:60px}
+    .highlight-card{text-align:center;padding:32px 20px;background:var(--charcoal-light);border:1px solid var(--glass-border);border-radius:var(--radius);transition:var(--transition)}
+    .highlight-card:hover{transform:translateY(-4px);border-color:rgba(232,114,42,0.3)}
+    .highlight-card .num{font-size:36px;font-weight:800;color:var(--orange);font-family:'Inter',sans-serif}
+    .highlight-card p{font-size:13px;color:var(--grey-400);margin-top:6px;text-transform:uppercase;letter-spacing:1px}
+    .cta-banner{text-align:center;padding:60px 40px;background:linear-gradient(135deg,var(--orange),var(--orange-dark));border-radius:var(--radius);color:#fff}
+    .cta-banner h3{font-size:32px;color:#fff;margin-bottom:12px}
+    .cta-banner p{font-size:16px;opacity:0.9;margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
+    .btn-white{padding:14px 32px;background:#fff;color:var(--orange-dark);font-weight:700;font-size:15px;border:none;border-radius:50px;cursor:pointer;transition:var(--transition);text-decoration:none;display:inline-block}
+    .btn-white:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(0,0,0,0.2)}
+    @media(max-width:768px){.full-gallery{grid-template-columns:1fr;grid-template-rows:auto}.full-gallery img:first-child{grid-row:auto}.features-section{grid-template-columns:1fr}.highlight-strip{grid-template-columns:1fr 1fr}.amenities-list{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">C</div><div class="nav-logo-text">CHANAN<span>.</span></div></a>
+    <ul class="nav-links">
+      <li><a href="honeycomb.html">Honeycomb Suites</a></li>
+      <li><a href="bedrock.html">Bedrock Suites</a></li>
+      <li><a href="vineyard.html" style="color:var(--orange)">Vineyard Luxury</a></li>
+      <li><a href="index.html#developments">Developments</a></li>
+      <li><a href="index.html#trust">Trust Vault</a></li>
+    </ul>
+    <a href="index.html#contact" class="nav-cta">Get In Touch</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close">✕</button>
+  <a href="honeycomb.html">Honeycomb Suites</a><a href="bedrock.html">Bedrock Suites</a><a href="vineyard.html">Vineyard Luxury</a>
+  <a href="index.html#developments">Developments</a><a href="index.html#trust">Trust Vault</a><a href="index.html#contact">Contact</a>
+</div>
+
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="container">
+    <span class="brand-badge">🍇 Flagship Property</span>
+    <h1>Vineyard <span class="accent">Luxury Homes</span></h1>
+    <p>An exclusive, high-end residence nestled in serene surroundings. Where luxury meets nature in perfect harmony — the crown jewel of Chanan Property Ventures.</p>
+  </div>
+</section>
+
+<section class="vineyard-section">
+  <div class="container">
+
+    <div class="full-gallery reveal">
+      <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1000&q=80" alt="Vineyard House Exterior">
+      <img src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=600&q=80" alt="Vineyard Interior">
+      <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=600&q=80" alt="Vineyard Pool Area">
+    </div>
+
+    <div class="highlight-strip reveal">
+      <div class="highlight-card"><div class="num">4</div><p>Bedrooms</p></div>
+      <div class="highlight-card"><div class="num">3</div><p>Bathrooms</p></div>
+      <div class="highlight-card"><div class="num">450</div><p>Sqm Living</p></div>
+      <div class="highlight-card"><div class="num">24/7</div><p>Security</p></div>
+    </div>
+
+    <div class="features-section reveal">
+      <div class="feature-block">
+        <h3>The Ultimate Residence</h3>
+        <p>Vineyard House is a masterpiece of modern architecture, featuring expansive open-plan living spaces, floor-to-ceiling windows that flood the interior with natural light, and premium materials throughout. Every room has been designed with intention — from the chef's kitchen to the master suite with panoramic views.</p>
+        <p>Set within manicured gardens with mature landscaping, the property offers complete privacy while remaining easily accessible. A separate entertainment pavilion and infinity pool make it ideal for hosting.</p>
+      </div>
+      <div class="feature-block">
+        <h3>Amenities & Features</h3>
+        <div class="amenities-list">
+          <div class="amenity-item"><span class="icon">🏊</span> Infinity Pool</div>
+          <div class="amenity-item"><span class="icon">🌳</span> Landscaped Gardens</div>
+          <div class="amenity-item"><span class="icon">👨‍🍳</span> Chef's Kitchen</div>
+          <div class="amenity-item"><span class="icon">🚗</span> Double Garage</div>
+          <div class="amenity-item"><span class="icon">🔥</span> Fireplace Lounge</div>
+          <div class="amenity-item"><span class="icon">🎭</span> Entertainment Pavilion</div>
+          <div class="amenity-item"><span class="icon">💡</span> Smart Home System</div>
+          <div class="amenity-item"><span class="icon">🔒</span> Gated & Guarded</div>
+          <div class="amenity-item"><span class="icon">☀️</span> Solar Power</div>
+          <div class="amenity-item"><span class="icon">💧</span> Borehole Water</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-banner reveal">
+      <h3>Interested in Vineyard House?</h3>
+      <p>Schedule a private viewing and experience the pinnacle of luxury living firsthand.</p>
+      <a href="index.html#contact" class="btn-white">Schedule a Viewing →</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
+      <div class="footer-socials"><a href="#">📷</a><a href="#">🐦</a><a href="#">💼</a><a href="#">💬</a></div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

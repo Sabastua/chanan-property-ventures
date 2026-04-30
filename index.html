@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chanan Property Ventures | Elevating Property Management</title>
+  <meta name="description" content="Chanan Property Ventures — Premium property management offering luxury suites, residential units, and exclusive homes.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='16' width='100' height='100' fill='%23E8722A'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>C</text></svg>">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">C</div>
+      <div class="nav-logo-text">CHANAN<span>.</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="honeycomb.html">Honeycomb Suites</a></li>
+      <li><a href="bedrock.html">Bedrock Suites</a></li>
+      <li><a href="vineyard.html">Vineyard Luxury</a></li>
+      <li><a href="#developments">Developments</a></li>
+      <li><a href="#trust">Trust Vault</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Get In Touch</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close">✕</button>
+  <a href="honeycomb.html">Honeycomb Suites</a>
+  <a href="bedrock.html">Bedrock Suites</a>
+  <a href="vineyard.html">Vineyard Luxury</a>
+  <a href="#developments">Developments</a>
+  <a href="#trust">Trust Vault</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-tag"><span class="dot"></span> Premium Property Management</div>
+      <h1>Elevating<span class="accent">Property Management.</span></h1>
+      <p class="hero-desc">From luxury short-stays to exclusive residential homes, Chanan Property Ventures delivers an unmatched living experience rooted in trust, quality, and sophistication.</p>
+      <div class="hero-btns">
+        <a href="#portfolio" class="btn-primary">Explore Portfolio →</a>
+        <a href="#contact" class="btn-outline">Make an Inquiry</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <h3 data-count="5" data-suffix="+">0</h3>
+          <p>Premium Units</p>
+        </div>
+        <div class="stat-item">
+          <h3 data-count="3">0</h3>
+          <p>Property Brands</p>
+        </div>
+        <div class="stat-item">
+          <h3 data-count="100" data-suffix="%">0</h3>
+          <p>Verified Titles</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <span class="hero-card-badge">Featured</span>
+        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Vineyard Luxury Home">
+        <div class="hero-card-info">
+          <h4>Vineyard House</h4>
+          <p>Flagship luxury residence</p>
+        </div>
+      </div>
+      <div class="hero-glow"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO OVERVIEW -->
+<section id="portfolio">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Our Portfolio</span>
+      <h2 class="section-title">Curated Living Spaces</h2>
+      <p class="section-desc">Discover our collection of premium properties, each crafted to deliver an exceptional experience.</p>
+    </div>
+    <div class="property-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <!-- Honeycomb Card -->
+      <a href="honeycomb.html" class="property-card reveal" style="text-decoration:none;">
+        <div class="img-wrap">
+          <span class="badge badge-available">Airbnb</span>
+          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Honeycomb Suites">
+        </div>
+        <div class="property-card-body">
+          <h4>🍯 Honeycomb Suites</h4>
+          <div class="location">📍 Units 102 & 103 · Short-Stay</div>
+          <p style="font-size:14px;color:var(--grey-400);margin-top:8px;">Premium Airbnb short-stay suites designed for comfort and convenience.</p>
+          <div class="property-card-footer">
+            <div class="price">From KES 3,800 <small>/night</small></div>
+            <span class="btn-book">View Units →</span>
+          </div>
+        </div>
+      </a>
+      <!-- Bedrock Card -->
+      <a href="bedrock.html" class="property-card reveal" style="text-decoration:none;">
+        <div class="img-wrap">
+          <span class="badge badge-premium">Residential</span>
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Bedrock Suites">
+        </div>
+        <div class="property-card-body">
+          <h4>🏗️ Bedrock Suites</h4>
+          <div class="location">📍 Units 80 & 81 · Long-Term</div>
+          <p style="font-size:14px;color:var(--grey-400);margin-top:8px;">Spacious residential apartments with a premium finish for modern living.</p>
+          <div class="property-card-footer">
+            <div class="price">From KES 40,000 <small>/month</small></div>
+            <span class="btn-book">View Units →</span>
+          </div>
+        </div>
+      </a>
+      <!-- Vineyard Card -->
+      <a href="vineyard.html" class="property-card reveal" style="text-decoration:none;">
+        <div class="img-wrap">
+          <span class="badge badge-exclusive">Exclusive</span>
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Vineyard House">
+        </div>
+        <div class="property-card-body">
+          <h4>🍇 Vineyard Luxury Homes</h4>
+          <div class="location">📍 Vineyard House · Flagship</div>
+          <p style="font-size:14px;color:var(--grey-400);margin-top:8px;">High-end exclusive residence where luxury meets nature in perfect harmony.</p>
+          <div class="property-card-footer">
+            <div class="price">Premium <small>by inquiry</small></div>
+            <span class="btn-book">Explore →</span>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- UPCOMING DEVELOPMENTS -->
+<section id="developments">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Coming Soon</span>
+      <h2 class="section-title">Future Developments</h2>
+      <p class="section-desc">Explore our pipeline of upcoming projects designed to redefine premium living.</p>
+    </div>
+    <div class="dev-grid">
+      <div class="dev-card reveal">
+        <img class="dev-img" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Project Aurora">
+        <div class="dev-overlay">
+          <span class="coming-badge">Coming 2027</span>
+          <h4>Project Aurora</h4>
+          <p>Mixed-use luxury complex</p>
+        </div>
+        <div class="dev-card-footer">
+          <div class="dev-progress"><div class="dev-progress-bar" style="width:35%"></div></div>
+          <div class="meta"><span>Planning Phase</span><span>35%</span></div>
+        </div>
+      </div>
+      <div class="dev-card reveal">
+        <img class="dev-img" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80" alt="Amber Residences">
+        <div class="dev-overlay">
+          <span class="coming-badge">Coming 2027</span>
+          <h4>Amber Residences</h4>
+          <p>Executive apartments</p>
+        </div>
+        <div class="dev-card-footer">
+          <div class="dev-progress"><div class="dev-progress-bar" style="width:20%"></div></div>
+          <div class="meta"><span>Concept Stage</span><span>20%</span></div>
+        </div>
+      </div>
+      <div class="dev-card reveal">
+        <img class="dev-img" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80" alt="The Crest Villas">
+        <div class="dev-overlay">
+          <span class="coming-badge">Coming 2028</span>
+          <h4>The Crest Villas</h4>
+          <p>Gated luxury community</p>
+        </div>
+        <div class="dev-card-footer">
+          <div class="dev-progress"><div class="dev-progress-bar" style="width:10%"></div></div>
+          <div class="meta"><span>Site Acquisition</span><span>10%</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST VAULT -->
+<section id="trust">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">Transparency</span>
+      <h2 class="section-title">The Trust Vault</h2>
+      <p class="section-desc">Access verified title deeds, legal documentation, and project credentials — all in one place.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-card reveal">
+        <div class="trust-icon">📜</div>
+        <h4>Title Deeds</h4>
+        <p>All properties backed by verified and registered title deeds, accessible for review.</p>
+        <button class="btn-view">View Documents</button>
+      </div>
+      <div class="trust-card reveal">
+        <div class="trust-icon">🔒</div>
+        <h4>Legal Compliance</h4>
+        <p>Fully compliant with local regulatory frameworks, building codes, and environmental guidelines.</p>
+        <button class="btn-view">Learn More</button>
+      </div>
+      <div class="trust-card reveal">
+        <div class="trust-icon">🏦</div>
+        <h4>Investment Security</h4>
+        <p>Transparent financial reporting and third-party audited records to protect your investment.</p>
+        <button class="btn-view">See Reports</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h3>Let's Start a Conversation</h3>
+        <p>Whether you're looking to book a stay, rent a home, or invest — we're here to help.</p>
+        <div class="contact-detail"><div class="icon">📞</div><div><strong>Phone</strong><p>+254 700 000 000</p></div></div>
+        <div class="contact-detail"><div class="icon">✉️</div><div><strong>Email</strong><p>hello@chananventures.com</p></div></div>
+        <div class="contact-detail"><div class="icon">📍</div><div><strong>Location</strong><p>Nairobi, Kenya</p></div></div>
+      </div>
+      <form class="contact-form reveal" id="inquiryForm">
+        <div class="form-row">
+          <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" placeholder="John Doe" required></div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="john@email.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" placeholder="+254 7XX XXX XXX"></div>
+          <div class="form-group"><label for="property">Property Interest</label>
+            <select id="property">
+              <option value="">Select a property</option>
+              <option>Honeycomb Suite 102</option>
+              <option>Honeycomb Suite 103</option>
+              <option>Bedrock Suite 80</option>
+              <option>Bedrock Suite 81</option>
+              <option>Vineyard House</option>
+              <option>Investment Inquiry</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Tell us about your needs..."></textarea></div>
+        <button type="submit" class="btn-submit">Send Inquiry →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon">C</div><div class="nav-logo-text">CHANAN<span>.</span></div></a>
+        <p>Elevating property management through trust, luxury, and innovation.</p>
+      </div>
+      <div class="footer-col"><h5>Properties</h5><ul><li><a href="honeycomb.html">Honeycomb Suites</a></li><li><a href="bedrock.html">Bedrock Suites</a></li><li><a href="vineyard.html">Vineyard House</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="#trust">Trust Vault</a></li><li><a href="#developments">Developments</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
+      <div class="footer-socials"><a href="#">📷</a><a href="#">🐦</a><a href="#">💼</a><a href="#">💬</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
