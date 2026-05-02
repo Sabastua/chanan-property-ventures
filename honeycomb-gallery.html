@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Honeycomb Suites Gallery | Chanan Property Ventures</title>
+  <meta name="description" content="View the full photo gallery for Honeycomb Suites.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='16' width='100' height='100' fill='%23E8722A'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>C</text></svg>">
+  <style>
+    .gallery-page { padding: 120px 0 80px; }
+    .gallery-header { text-align: center; margin-bottom: 50px; }
+    .gallery-header h1 { font-size: 42px; margin-bottom: 12px; }
+    .gallery-header h1 .accent { color: var(--orange); }
+    .gallery-header p { color: var(--grey-400); font-size: 16px; max-width: 600px; margin: 0 auto; }
+    
+    .full-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 16px;
+    }
+    .full-grid img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: var(--radius-sm);
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .full-grid img:hover {
+      transform: scale(1.02);
+      box-shadow: var(--shadow);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 2000;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s ease;
+    }
+    .lightbox.active { opacity: 1; pointer-events: auto; }
+    .lightbox img { max-width: 90%; max-height: 90vh; border-radius: var(--radius-sm); object-fit: contain; }
+    .lightbox-close { position: absolute; top: 30px; right: 30px; color: white; font-size: 36px; background: none; border: none; cursor: pointer; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">C</div>
+      <div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="honeycomb.html" style="color:var(--orange)">Honeycomb Suites</a></li>
+      <li><a href="bedrock.html">Bedrock Suites</a></li>
+      <li><a href="vineyard.html">Vineyard Luxury</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta">Get In Touch</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close">✕</button>
+  <a href="honeycomb.html">Honeycomb Suites</a>
+  <a href="bedrock.html">Bedrock Suites</a>
+  <a href="vineyard.html">Vineyard Luxury</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="gallery-page">
+  <div class="container">
+    <div class="gallery-header reveal">
+      <a href="honeycomb.html" style="color:var(--orange); display:inline-block; margin-bottom: 20px; font-weight:600; text-decoration:none;">← Back to Honeycomb Suites</a>
+      <h1>Photo <span class="accent">Gallery</span></h1>
+      <p>Explore the details, luxury, and comfort of Honeycomb Suites through our complete photo collection.</p>
+    </div>
+
+    <div class="full-grid reveal" id="galleryGrid">
+      <!-- Generated JS images will go here -->
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <img src="" id="lightboxImg" alt="Gallery Full">
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon">C</div><div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div></a>
+        <p>Elevating property management through trust, luxury, and innovation.</p>
+      </div>
+      <div class="footer-col"><h5>Properties</h5><ul><li><a href="honeycomb.html">Honeycomb Suites</a></li><li><a href="bedrock.html">Bedrock Suites</a></li><li><a href="vineyard.html">Vineyard House</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="index.html#trust">Trust Vault</a></li><li><a href="index.html#developments">Developments</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
+      <div class="footer-socials"><a href="#">📷</a><a href="#">🐦</a><a href="#">💼</a><a href="#">💬</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+  const images = [
+    "DSC_0059.jpg", "DSC_0060.jpg", "DSC_0062.jpg", "DSC_0064.jpg", "DSC_0075.jpg",
+    "DSC_0080.jpg", "DSC_0082.jpg", "DSC_0083.jpg", "DSC_0085.jpg", "DSC_0086.jpg",
+    "DSC_0088.jpg", "DSC_0090.jpg", "DSC_0094.jpg", "DSC_0098.jpg", "DSC_0100.jpg",
+    "DSC_0101.jpg", "DSC_0103.jpg", "DSC_0108.jpg", "DSC_0113.jpg", "DSC_0116.jpg",
+    "DSC_0119.jpg", "DSC_0120.jpg", "DSC_0122.jpg", "DSC_0126.jpg", "DSC_0127.jpg",
+    "DSC_0130.jpg", "DSC_0131.jpg", "DSC_0135.jpg", "DSC_0137.jpg", "DSC_0143.jpg",
+    "DSC_0144.jpg", "USE THIS .jpg"
+  ];
+
+  const galleryGrid = document.getElementById('galleryGrid');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxClose = document.getElementById('lightboxClose');
+
+  images.forEach(img => {
+    const el = document.createElement('img');
+    el.src = 'images/' + img;
+    el.alt = 'Honeycomb Gallery Image';
+    el.loading = 'lazy';
+    el.addEventListener('click', () => {
+      lightboxImg.src = el.src;
+      lightbox.classList.add('active');
+    });
+    galleryGrid.appendChild(el);
+  });
+
+  lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) lightbox.classList.remove('active');
+  });
+</script>
+</body>
+</html>
