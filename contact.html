@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Chanan Property Ventures</title>
+  <meta name="description" content="Contact Chanan Property Ventures to book a stay, rent a home, or invest.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='16' width='100' height='100' fill='%23E8722A'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>C</text></svg>">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">C</div>
+      <div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="honeycomb.html">Honeycomb Suites</a></li>
+      <li><a href="bedrock.html">Bedrock Suites</a></li>
+      <li><a href="vineyard.html">Vineyard Luxury</a></li>
+    </ul>
+    <a href="contact.html" class="nav-cta" style="background:transparent; border:1px solid var(--orange); color:var(--orange);">Get In Touch</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose" aria-label="Close">✕</button>
+  <a href="honeycomb.html">Honeycomb Suites</a>
+  <a href="bedrock.html">Bedrock Suites</a>
+  <a href="vineyard.html">Vineyard Luxury</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="page-hero" style="min-height: 40vh; padding-top: 100px;">
+  <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1920&q=80'); position:absolute; inset:0; background-size:cover; background-position:center; z-index:0;"></div>
+  <div style="position:absolute; inset:0; background:linear-gradient(135deg,rgba(250,250,250,0.92),rgba(247,247,248,0.85)); z-index:0;"></div>
+  <div class="container" style="position:relative; z-index:1;">
+    <span class="brand-badge" style="display:inline-flex; align-items:center; gap:8px; padding:8px 18px; background:rgba(232,114,42,0.1); border:1px solid rgba(232,114,42,0.2); border-radius:50px; font-size:13px; font-weight:600; color:var(--orange); margin-bottom:20px;">💬 Let's Talk</span>
+    <h1 style="font-size:clamp(36px,5vw,64px); margin-bottom:12px;">Contact <span class="accent" style="color:var(--orange);">Us</span></h1>
+    <p style="font-size:18px; color:var(--grey-400); max-width:640px; line-height:1.8;">Whether you're looking to book a stay, rent a home, or invest — we're here to help.</p>
+  </div>
+</section>
+
+<section id="contact" style="padding: 100px 0; background: var(--charcoal);">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h3>Let's Start a Conversation</h3>
+        <p>Reach out to our team for bookings, property management inquiries, or investment opportunities.</p>
+        <div class="contact-detail"><div class="icon">📞</div><div><strong>Phone</strong><p>+254 700 000 000</p></div></div>
+        <div class="contact-detail"><div class="icon">✉️</div><div><strong>Email</strong><p>hello@chananventures.com</p></div></div>
+        <div class="contact-detail"><div class="icon">📍</div><div><strong>Location</strong><p>Nairobi, Kenya</p></div></div>
+      </div>
+      <form class="contact-form reveal" id="inquiryForm">
+        <div class="form-row">
+          <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" placeholder="John Doe" required></div>
+          <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="john@email.com" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" placeholder="+254 7XX XXX XXX"></div>
+          <div class="form-group"><label for="property">Property Interest</label>
+            <select id="property">
+              <option value="">Select a property</option>
+              <option>Honeycomb Suite 102</option>
+              <option>Honeycomb Suite 103</option>
+              <option>Bedrock Suite 80</option>
+              <option>Bedrock Suite 81</option>
+              <option>Vineyard House</option>
+              <option>Investment Inquiry</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Tell us about your needs..."></textarea></div>
+        <button type="submit" class="btn-submit">Send Inquiry →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo"><div class="nav-logo-icon">C</div><div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div></a>
+        <p>Elevating property management through trust, luxury, and innovation.</p>
+      </div>
+      <div class="footer-col"><h5>Properties</h5><ul><li><a href="honeycomb.html">Honeycomb Suites</a></li><li><a href="bedrock.html">Bedrock Suites</a></li><li><a href="vineyard.html">Vineyard House</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="index.html#trust">Trust Vault</a></li><li><a href="index.html#developments">Developments</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
+      <div class="footer-socials"><a href="#">📷</a><a href="#">🐦</a><a href="#">💼</a><a href="#">💬</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -7,6 +7,46 @@
   <meta name="description" content="Chanan Property Ventures — Premium property management offering luxury suites, residential units, and exclusive homes.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='16' width='100' height='100' fill='%23E8722A'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>C</text></svg>">
+  <style>
+    .card-slider { position: relative; width: 100%; height: 100%; }
+    .card-slide {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+      opacity: 0; animation: cardFade 50s infinite linear; pointer-events: none;
+    }
+    .card-slide:nth-child(1) { position: relative; pointer-events: auto; }
+    .card-slide:nth-child(1) { animation-delay: 0s; }
+    .card-slide:nth-child(2) { animation-delay: 5s; }
+    .card-slide:nth-child(3) { animation-delay: 10s; }
+    .card-slide:nth-child(4) { animation-delay: 15s; }
+    .card-slide:nth-child(5) { animation-delay: 20s; }
+    .card-slide:nth-child(6) { animation-delay: 25s; }
+    .card-slide:nth-child(7) { animation-delay: 30s; }
+    .card-slide:nth-child(8) { animation-delay: 35s; }
+    .card-slide:nth-child(9) { animation-delay: 40s; }
+    .card-slide:nth-child(10) { animation-delay: 45s; }
+    @keyframes cardFade {
+      0% { opacity: 0; transform: scale(1); }
+      2% { opacity: 1; transform: scale(1.02); }
+      10% { opacity: 1; transform: scale(1.08); }
+      12% { opacity: 0; transform: scale(1.1); }
+      100% { opacity: 0; transform: scale(1.1); }
+    }
+    .hero-slider-bg { position: absolute; inset: 0; z-index: 0; }
+    .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; animation: heroFade 30s infinite linear; }
+    .hero-slide:nth-child(1) { animation-delay: 0s; }
+    .hero-slide:nth-child(2) { animation-delay: 6s; }
+    .hero-slide:nth-child(3) { animation-delay: 12s; }
+    .hero-slide:nth-child(4) { animation-delay: 18s; }
+    .hero-slide:nth-child(5) { animation-delay: 24s; }
+    @keyframes heroFade {
+      0% { opacity: 0; transform: scale(1); }
+      3% { opacity: 1; transform: scale(1.01); }
+      20% { opacity: 1; transform: scale(1.05); }
+      23% { opacity: 0; transform: scale(1.06); }
+      100% { opacity: 0; transform: scale(1.06); }
+    }
+    .hero-bg-overlay { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, rgba(250,250,250,0.90) 0%, rgba(247,247,248,0.80) 50%, rgba(250,250,250,0.93) 100%); }
+  </style>
 </head>
 <body>
 
@@ -22,7 +62,7 @@
       <li><a href="bedrock.html">Bedrock Suites</a></li>
       <li><a href="vineyard.html">Vineyard Luxury</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Get In Touch</a>
+    <a href="contact.html" class="nav-cta">Get In Touch</a>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -35,12 +75,19 @@
   <a href="honeycomb.html">Honeycomb Suites</a>
   <a href="bedrock.html">Bedrock Suites</a>
   <a href="vineyard.html">Vineyard Luxury</a>
-  <a href="#contact">Contact</a>
+  <a href="contact.html">Contact</a>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="hero">
-  <div class="hero-bg"></div>
+  <div class="hero-slider-bg">
+    <div class="hero-slide" style="background-image: url('images/USE%20THIS%20.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('images/DSC_0143.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('images/DSC_0064.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('images/DSC_0080.jpg')"></div>
+    <div class="hero-slide" style="background-image: url('images/DSC_0059.jpg')"></div>
+  </div>
+  <div class="hero-bg-overlay"></div>
   <div class="container">
     <div class="hero-content">
       <div class="hero-tag"><span class="dot"></span> Premium Property Management</div>
@@ -48,7 +95,7 @@
       <p class="hero-desc">From luxury short-stays to exclusive residential homes, Chanan Property Ventures delivers an unmatched living experience rooted in trust, quality, and sophistication.</p>
       <div class="hero-btns">
         <a href="#portfolio" class="btn-primary">Explore Portfolio →</a>
-        <a href="#contact" class="btn-outline">Make an Inquiry</a>
+        <a href="contact.html" class="btn-outline">Make an Inquiry</a>
       </div>
       <div class="hero-stats">
         <div class="stat-item">
@@ -92,7 +139,18 @@
       <a href="honeycomb.html" class="property-card reveal" style="text-decoration:none;">
         <div class="img-wrap">
           <span class="badge badge-available">Airbnb</span>
-          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=600&q=80" alt="Honeycomb Suites">
+          <div class="card-slider">
+            <img class="card-slide" src="images/USE%20THIS%20.jpg" alt="Honeycomb Suites">
+            <img class="card-slide" src="images/DSC_0059.jpg" alt="Honeycomb Suites">
+            <img class="card-slide" src="images/DSC_0060.jpg" alt="Honeycomb Suites">
+            <img class="card-slide" src="images/DSC_0062.jpg" alt="Honeycomb Suites">
+            <img class="card-slide" src="images/DSC_0064.jpg" alt="Honeycomb Suites">
+            <img class="card-slide" src="images/DSC_0075.jpg" alt="Honeycomb Suites">
+            <img class="card-slide" src="images/DSC_0080.jpg" alt="Honeycomb Suites">
+            <img class="card-slide" src="images/DSC_0082.jpg" alt="Honeycomb Suites">
+            <img class="card-slide" src="images/DSC_0083.jpg" alt="Honeycomb Suites">
+            <img class="card-slide" src="images/DSC_0143.jpg" alt="Honeycomb Suites">
+          </div>
         </div>
         <div class="property-card-body">
           <h4>🍯 Honeycomb Suites</h4>
@@ -220,44 +278,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <span class="section-tag">Get In Touch</span>
-        <h3>Let's Start a Conversation</h3>
-        <p>Whether you're looking to book a stay, rent a home, or invest — we're here to help.</p>
-        <div class="contact-detail"><div class="icon">📞</div><div><strong>Phone</strong><p>+254 700 000 000</p></div></div>
-        <div class="contact-detail"><div class="icon">✉️</div><div><strong>Email</strong><p>hello@chananventures.com</p></div></div>
-        <div class="contact-detail"><div class="icon">📍</div><div><strong>Location</strong><p>Nairobi, Kenya</p></div></div>
-      </div>
-      <form class="contact-form reveal" id="inquiryForm">
-        <div class="form-row">
-          <div class="form-group"><label for="name">Full Name</label><input type="text" id="name" placeholder="John Doe" required></div>
-          <div class="form-group"><label for="email">Email</label><input type="email" id="email" placeholder="john@email.com" required></div>
-        </div>
-        <div class="form-row">
-          <div class="form-group"><label for="phone">Phone</label><input type="tel" id="phone" placeholder="+254 7XX XXX XXX"></div>
-          <div class="form-group"><label for="property">Property Interest</label>
-            <select id="property">
-              <option value="">Select a property</option>
-              <option>Honeycomb Suite 102</option>
-              <option>Honeycomb Suite 103</option>
-              <option>Bedrock Suite 80</option>
-              <option>Bedrock Suite 81</option>
-              <option>Vineyard House</option>
-              <option>Investment Inquiry</option>
-            </select>
-          </div>
-        </div>
-        <div class="form-group"><label for="message">Message</label><textarea id="message" placeholder="Tell us about your needs..."></textarea></div>
-        <button type="submit" class="btn-submit">Send Inquiry →</button>
-      </form>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer class="footer">
   <div class="container">
@@ -267,7 +287,7 @@
         <p>Elevating property management through trust, luxury, and innovation.</p>
       </div>
       <div class="footer-col"><h5>Properties</h5><ul><li><a href="honeycomb.html">Honeycomb Suites</a></li><li><a href="bedrock.html">Bedrock Suites</a></li><li><a href="vineyard.html">Vineyard House</a></li></ul></div>
-      <div class="footer-col"><h5>Company</h5><ul><li><a href="#trust">Trust Vault</a></li><li><a href="#developments">Developments</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+      <div class="footer-col"><h5>Company</h5><ul><li><a href="#trust">Trust Vault</a></li><li><a href="#developments">Developments</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
       <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
     </div>
     <div class="footer-bottom">
