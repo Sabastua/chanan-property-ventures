@@ -6,7 +6,7 @@
   <title>Honeycomb Suites Gallery | Chanan Property Ventures</title>
   <meta name="description" content="View the full photo gallery for Honeycomb Suites.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='16' width='100' height='100' fill='%23E8722A'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>C</text></svg>">
+  <link rel="icon" href="images/LOGO.jpeg">
   <style>
     .gallery-page { padding: 120px 0 80px; }
     .gallery-header { text-align: center; margin-bottom: 50px; }
@@ -17,19 +17,7 @@
     .full-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 16px;
-    }
-    .full-grid img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: var(--radius-sm);
-      transition: var(--transition);
-      cursor: pointer;
-    }
-    .full-grid img:hover {
-      transform: scale(1.02);
-      box-shadow: var(--shadow);
+      gap: 18px;
     }
 
     /* Lightbox */
@@ -48,7 +36,7 @@
 <nav class="navbar" id="navbar">
   <div class="container">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">C</div>
+      <img src="images/LOGO.jpeg" alt="Chanan Logo" class="nav-logo-img">
       <div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div>
     </a>
     <ul class="nav-links">
@@ -62,7 +50,7 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose" aria-label="Close">✕</button>
+  <button class="mobile-close" id="mobileClose" aria-label="Close">X</button>
   <a href="honeycomb.html">Honeycomb Suites</a>
   <a href="bedrock.html">Bedrock Suites</a>
   <a href="vineyard.html">Vineyard Luxury</a>
@@ -84,7 +72,7 @@
 </section>
 
 <div class="lightbox" id="lightbox">
-  <button class="lightbox-close" id="lightboxClose">✕</button>
+  <button class="lightbox-close" id="lightboxClose">X</button>
   <img src="" id="lightboxImg" alt="Gallery Full">
 </div>
 
@@ -92,7 +80,7 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="index.html" class="nav-logo"><div class="nav-logo-icon">C</div><div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div></a>
+        <a href="index.html" class="nav-logo"><img src="images/LOGO.jpeg" alt="Chanan Logo" class="nav-logo-img"><div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div></a>
         <p>Elevating property management through trust, luxury, and innovation.</p>
       </div>
       <div class="footer-col"><h5>Properties</h5><ul><li><a href="honeycomb.html">Honeycomb Suites</a></li><li><a href="bedrock.html">Bedrock Suites</a></li><li><a href="vineyard.html">Vineyard House</a></li></ul></div>
@@ -101,7 +89,12 @@
     </div>
     <div class="footer-bottom">
       <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
-      <div class="footer-socials"><a href="#">📷</a><a href="#">🐦</a><a href="#">💼</a><a href="#">💬</a></div>
+      <div class="footer-socials">
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">WhatsApp</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -124,15 +117,22 @@
   const lightboxClose = document.getElementById('lightboxClose');
 
   images.forEach(img => {
+    const card = document.createElement('button');
+    card.type = 'button';
+    card.className = 'photo-card reveal';
+    card.setAttribute('aria-label', 'Open photo');
+
     const el = document.createElement('img');
     el.src = 'images/' + img;
-    el.alt = 'Honeycomb Gallery Image';
+    el.alt = 'Honeycomb photo';
     el.loading = 'lazy';
-    el.addEventListener('click', () => {
+
+    card.appendChild(el);
+    card.addEventListener('click', () => {
       lightboxImg.src = el.src;
       lightbox.classList.add('active');
     });
-    galleryGrid.appendChild(el);
+    galleryGrid.appendChild(card);
   });
 
   lightboxClose.addEventListener('click', () => lightbox.classList.remove('active'));

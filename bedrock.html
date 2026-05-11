@@ -6,9 +6,9 @@
   <title>Bedrock Suites | Chanan Property Ventures</title>
   <meta name="description" content="Bedrock Suites — Premium residential apartments Units 80 & 81 by Chanan Property Ventures.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='16' width='100' height='100' fill='%23E8722A'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>C</text></svg>">
+  <link rel="icon" href="images/LOGO.jpeg">
   <style>
-    .page-hero{min-height:50vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:100px}
+    .page-hero{min-height:50vh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:140px}
     .page-hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80') center/cover no-repeat}
     .page-hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(250,250,250,0.92),rgba(247,247,248,0.85))}
     .page-hero .container{position:relative;z-index:1}
@@ -35,14 +35,20 @@
     @media(max-width:768px){.unit-layout,.unit-layout.reverse{grid-template-columns:1fr;direction:ltr}}
   </style>
 </head>
-<body>
+<body id="top">
+
+<div class="liquid-bg">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
 
 <nav class="navbar" id="navbar">
   <div class="container">
-    <a href="index.html" class="nav-logo"><div class="nav-logo-icon">C</div><div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div></a>
+    <a href="index.html" class="nav-logo"><img src="images/LOGO.jpeg" alt="Chanan Logo" class="nav-logo-img"><div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div></a>
     <ul class="nav-links">
       <li><a href="honeycomb.html">Honeycomb Suites</a></li>
-      <li><a href="bedrock.html" style="color:var(--orange)">Bedrock Suites</a></li>
+      <li><a href="bedrock.html">Bedrock Suites</a></li>
       <li><a href="vineyard.html">Vineyard Luxury</a></li>
     </ul>
     <a href="contact.html" class="nav-cta">Get In Touch</a>
@@ -51,15 +57,15 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose" aria-label="Close">✕</button>
+  <button class="mobile-close" id="mobileClose" aria-label="Close">X</button>
   <a href="honeycomb.html">Honeycomb Suites</a><a href="bedrock.html">Bedrock Suites</a><a href="vineyard.html">Vineyard Luxury</a>
   <a href="contact.html">Contact</a>
 </div>
 
-<section class="page-hero">
+<section class="page-hero reveal">
   <div class="page-hero-bg"></div>
   <div class="container">
-    <span class="brand-badge">🏗️ Residential Collection</span>
+    <div class="brand-badge">Residential Collection</div>
     <h1>Bedrock <span class="accent">Suites</span></h1>
     <p>Premium residential apartments designed for modern living. Spacious interiors, high-quality finishes, and a prime location — your next home awaits.</p>
   </div>
@@ -82,14 +88,14 @@
         <h3>The Executive Apartment</h3>
         <p>A generous two-bedroom apartment with premium stone finishes, an open-plan living area, and a fully fitted modern kitchen. Designed for professionals and families who value space and comfort.</p>
         <div class="amenities-grid">
-          <div class="amenity">🛏️ 2 Bedrooms</div>
-          <div class="amenity">🚿 2 Bathrooms</div>
-          <div class="amenity">🍳 Full Kitchen</div>
-          <div class="amenity">🅿️ Parking Bay</div>
-          <div class="amenity">📶 Fiber Internet</div>
-          <div class="amenity">🧺 In-Unit Laundry</div>
-          <div class="amenity">🏋️ Gym Access</div>
-          <div class="amenity">🔒 24/7 Security</div>
+          <div class="amenity">2 Bedrooms</div>
+          <div class="amenity">2 Bathrooms</div>
+          <div class="amenity">Full Kitchen</div>
+          <div class="amenity">Parking Bay</div>
+          <div class="amenity">Fiber Internet</div>
+          <div class="amenity">In-Unit Laundry</div>
+          <div class="amenity">Gym Access</div>
+          <div class="amenity">24/7 Security</div>
         </div>
         <div class="unit-price">KES 45,000 <small>/month</small></div>
         <a href="contact.html" class="btn-primary">Inquire Now →</a>
@@ -111,14 +117,14 @@
         <h3>The Comfort Residence</h3>
         <p>A well-designed two-bedroom apartment with warm tones, ample natural lighting, and thoughtful layouts. An ideal home base with all the essentials for comfortable urban living.</p>
         <div class="amenities-grid">
-          <div class="amenity">🛏️ 2 Bedrooms</div>
-          <div class="amenity">🚿 1 Bathroom</div>
-          <div class="amenity">🍳 Full Kitchen</div>
-          <div class="amenity">🅿️ Parking Bay</div>
-          <div class="amenity">📶 Fiber Internet</div>
-          <div class="amenity">🧺 Laundry Area</div>
-          <div class="amenity">🌳 Balcony</div>
-          <div class="amenity">🔒 24/7 Security</div>
+          <div class="amenity">2 Bedrooms</div>
+          <div class="amenity">1 Bathroom</div>
+          <div class="amenity">Full Kitchen</div>
+          <div class="amenity">Parking Bay</div>
+          <div class="amenity">Fiber Internet</div>
+          <div class="amenity">Laundry Area</div>
+          <div class="amenity">Balcony</div>
+          <div class="amenity">24/7 Security</div>
         </div>
         <div class="unit-price">KES 40,000 <small>/month</small></div>
         <a href="contact.html" class="btn-primary">Inquire Now →</a>
@@ -131,10 +137,21 @@
   <div class="container">
     <div class="footer-bottom">
       <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
-      <div class="footer-socials"><a href="#">📷</a><a href="#">🐦</a><a href="#">💼</a><a href="#">💬</a></div>
+      <div class="footer-socials">
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">WhatsApp</a>
+      </div>
     </div>
   </div>
 </footer>
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/254708085734?text=Hello%20Chanan!%20I%27m%20interested%20in%20Bedrock%20Suites." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <span class="wa-pulse"></span>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  Inquire Now
+</a>
 <script src="script.js"></script>
 </body>
 </html>

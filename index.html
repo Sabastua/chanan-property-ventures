@@ -3,34 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chanan Property Ventures | Elevating Property Management</title>
+  <title>Chanan Property Ventures | Premium Property Management</title>
   <meta name="description" content="Chanan Property Ventures — Premium property management offering luxury suites, residential units, and exclusive homes.">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect rx='16' width='100' height='100' fill='%23E8722A'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='white' font-family='serif' font-weight='bold'>C</text></svg>">
+  <link rel="icon" href="images/LOGO.jpeg">
   <style>
-    .card-slider { position: relative; width: 100%; height: 100%; }
-    .card-slide {
-      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-      opacity: 0; animation: cardFade 50s infinite linear; pointer-events: none;
-    }
-    .card-slide:nth-child(1) { position: relative; pointer-events: auto; }
-    .card-slide:nth-child(1) { animation-delay: 0s; }
-    .card-slide:nth-child(2) { animation-delay: 5s; }
-    .card-slide:nth-child(3) { animation-delay: 10s; }
-    .card-slide:nth-child(4) { animation-delay: 15s; }
-    .card-slide:nth-child(5) { animation-delay: 20s; }
-    .card-slide:nth-child(6) { animation-delay: 25s; }
-    .card-slide:nth-child(7) { animation-delay: 30s; }
-    .card-slide:nth-child(8) { animation-delay: 35s; }
-    .card-slide:nth-child(9) { animation-delay: 40s; }
-    .card-slide:nth-child(10) { animation-delay: 45s; }
-    @keyframes cardFade {
-      0% { opacity: 0; transform: scale(1); }
-      2% { opacity: 1; transform: scale(1.02); }
-      10% { opacity: 1; transform: scale(1.08); }
-      12% { opacity: 0; transform: scale(1.1); }
-      100% { opacity: 0; transform: scale(1.1); }
-    }
     .hero-slider-bg { position: absolute; inset: 0; z-index: 0; }
     .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0; animation: heroFade 30s infinite linear; }
     .hero-slide:nth-child(1) { animation-delay: 0s; }
@@ -45,16 +22,22 @@
       23% { opacity: 0; transform: scale(1.06); }
       100% { opacity: 0; transform: scale(1.06); }
     }
-    .hero-bg-overlay { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, rgba(250,250,250,0.90) 0%, rgba(247,247,248,0.80) 50%, rgba(250,250,250,0.93) 100%); }
+    .hero-bg-overlay { position: absolute; inset: 0; z-index: 0; background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.5) 50%, rgba(255,255,255,0.8) 100%); }
   </style>
 </head>
-<body>
+<body id="top">
+
+<div class="liquid-bg">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+</div>
 
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
   <div class="container">
     <a href="index.html" class="nav-logo">
-      <div class="nav-logo-icon">C</div>
+      <img src="images/LOGO.jpeg" alt="Chanan Logo" class="nav-logo-img">
       <div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div>
     </a>
     <ul class="nav-links">
@@ -63,15 +46,12 @@
       <li><a href="vineyard.html">Vineyard Luxury</a></li>
     </ul>
     <a href="contact.html" class="nav-cta">Get In Touch</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
+    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose" aria-label="Close">✕</button>
+  <button class="mobile-close" id="mobileClose" aria-label="Close">X</button>
   <a href="honeycomb.html">Honeycomb Suites</a>
   <a href="bedrock.html">Bedrock Suites</a>
   <a href="vineyard.html">Vineyard Luxury</a>
@@ -90,107 +70,130 @@
   <div class="hero-bg-overlay"></div>
   <div class="container">
     <div class="hero-content">
-      <div class="hero-tag"><span class="dot"></span> Premium Property Management</div>
-      <h1>Elevating<span class="accent">Property Management.</span></h1>
-      <p class="hero-desc">From luxury short-stays to exclusive residential homes, Chanan Property Ventures delivers an unmatched living experience rooted in trust, quality, and sophistication.</p>
+      <h1>Where Every Stay Feels Like <span class="accent">Home.</span></h1>
+      <p class="hero-desc">Luxury isn't a price tag — it's a feeling. Chanan Property Ventures curates spaces that don't just house you, they <em>move</em> you.</p>
       <div class="hero-btns">
-        <a href="#portfolio" class="btn-primary">Explore Portfolio →</a>
-        <a href="contact.html" class="btn-outline">Make an Inquiry</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <h3 data-count="5" data-suffix="+">0</h3>
-          <p>Premium Units</p>
-        </div>
-        <div class="stat-item">
-          <h3 data-count="3">0</h3>
-          <p>Property Brands</p>
-        </div>
-        <div class="stat-item">
-          <h3 data-count="100" data-suffix="%">0</h3>
-          <p>Verified Titles</p>
-        </div>
+        <a href="contact.html" class="btn-primary">Get Started</a>
+        <a href="#portfolio" class="btn-outline">Explore Portfolio →</a>
       </div>
     </div>
-    <div class="hero-visual">
-      <div class="hero-card">
-        <span class="hero-card-badge">Featured</span>
-        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Vineyard Luxury Home">
-        <div class="hero-card-info">
-          <h4>Vineyard House</h4>
-          <p>Flagship luxury residence</p>
+    <div class="hero-visual reveal">
+      <div class="hero-glass-card">
+        <div class="card-slider" style="height: 350px; border-radius: var(--radius-sm); margin-bottom: 24px;">
+          <img class="card-slide active" src="images/USE THIS .jpg" alt="Property 1">
+          <img class="card-slide" src="images/DSC_0059.jpg" alt="Property 2">
+          <img class="card-slide" src="images/DSC_0060.jpg" alt="Property 3">
+          <img class="card-slide" src="images/DSC_0062.jpg" alt="Property 4">
+          <img class="card-slide" src="images/DSC_0064.jpg" alt="Property 5">
+          <img class="card-slide" src="images/DSC_0075.jpg" alt="Property 6">
+          <img class="card-slide" src="images/DSC_0080.jpg" alt="Property 7">
+          <img class="card-slide" src="images/DSC_0082.jpg" alt="Property 8">
+          <img class="card-slide" src="images/DSC_0083.jpg" alt="Property 9">
+          <img class="card-slide" src="images/DSC_0085.jpg" alt="Property 10">
+          <img class="card-slide" src="images/DSC_0086.jpg" alt="Property 11">
+          <img class="card-slide" src="images/DSC_0088.jpg" alt="Property 12">
+          <img class="card-slide" src="images/DSC_0090.jpg" alt="Property 13">
+          <img class="card-slide" src="images/DSC_0094.jpg" alt="Property 14">
+          <img class="card-slide" src="images/DSC_0098.jpg" alt="Property 15">
+          <img class="card-slide" src="images/DSC_0100.jpg" alt="Property 16">
+          <img class="card-slide" src="images/DSC_0101.jpg" alt="Property 17">
+          <img class="card-slide" src="images/DSC_0103.jpg" alt="Property 18">
+          <img class="card-slide" src="images/DSC_0108.jpg" alt="Property 19">
+          <img class="card-slide" src="images/DSC_0113.jpg" alt="Property 20">
+          <img class="card-slide" src="images/DSC_0116.jpg" alt="Property 21">
+          <img class="card-slide" src="images/DSC_0119.jpg" alt="Property 22">
+          <img class="card-slide" src="images/DSC_0120.jpg" alt="Property 23">
+          <img class="card-slide" src="images/DSC_0122.jpg" alt="Property 24">
+          <img class="card-slide" src="images/DSC_0126.jpg" alt="Property 25">
+          <img class="card-slide" src="images/DSC_0127.jpg" alt="Property 26">
+          <img class="card-slide" src="images/DSC_0130.jpg" alt="Property 27">
+          <img class="card-slide" src="images/DSC_0131.jpg" alt="Property 28">
+          <img class="card-slide" src="images/DSC_0135.jpg" alt="Property 29">
+          <img class="card-slide" src="images/DSC_0137.jpg" alt="Property 30">
+          <img class="card-slide" src="images/DSC_0143.jpg" alt="Property 31">
+          <img class="card-slide" src="images/DSC_0144.jpg" alt="Property 32">
         </div>
+        <h4>Honeycomb Suites</h4>
+        <p>Premium short-stay units designed for comfort, style, and an effortless home-away-from-home experience.</p>
       </div>
       <div class="hero-glow"></div>
     </div>
   </div>
 </section>
 
-<!-- PORTFOLIO OVERVIEW -->
+<!-- PORTFOLIO -->
 <section id="portfolio">
   <div class="container">
     <div class="section-header reveal">
       <span class="section-tag">Our Portfolio</span>
-      <h2 class="section-title">Curated Living Spaces</h2>
-      <p class="section-desc">Discover our collection of premium properties, each crafted to deliver an exceptional experience.</p>
+      <h2 class="section-title">Exclusive Properties</h2>
     </div>
+
+    <!-- STATS BAR -->
+    <div class="stats-bar reveal">
+      <div class="stat-item"><h3>2</h3><p>Active Listings</p></div>
+      <div class="stat-item"><h3>4.9/5</h3><p>Avg. Rating</p></div>
+      <div class="stat-item"><h3>&lt;1hr</h3><p>Response Time</p></div>
+      <div class="stat-item"><h3>100%</h3><p>Superhost Status</p></div>
+    </div>
+    
     <div class="property-grid">
-      <!-- Honeycomb Card -->
-      <a href="honeycomb.html" class="property-card reveal" style="text-decoration:none;">
-        <div class="img-wrap">
-          <span class="badge badge-available">Airbnb</span>
-          <div class="card-slider">
-            <img class="card-slide" src="images/USE%20THIS%20.jpg" alt="Honeycomb Suites">
-            <img class="card-slide" src="images/DSC_0059.jpg" alt="Honeycomb Suites">
-            <img class="card-slide" src="images/DSC_0060.jpg" alt="Honeycomb Suites">
-            <img class="card-slide" src="images/DSC_0062.jpg" alt="Honeycomb Suites">
-            <img class="card-slide" src="images/DSC_0064.jpg" alt="Honeycomb Suites">
-            <img class="card-slide" src="images/DSC_0075.jpg" alt="Honeycomb Suites">
-            <img class="card-slide" src="images/DSC_0080.jpg" alt="Honeycomb Suites">
-            <img class="card-slide" src="images/DSC_0082.jpg" alt="Honeycomb Suites">
-            <img class="card-slide" src="images/DSC_0083.jpg" alt="Honeycomb Suites">
-            <img class="card-slide" src="images/DSC_0143.jpg" alt="Honeycomb Suites">
-          </div>
+      <!-- Honeycomb -->
+      <a href="honeycomb.html" class="property-card reveal">
+        <div class="property-img">
+          <span class="property-badge">Airbnb Collection</span>
+          <img src="images/USE THIS .jpg" alt="Honeycomb Suites">
         </div>
-        <div class="property-card-body">
-          <h4>🍯 Honeycomb Suites</h4>
-          <div class="location">📍 Units 102 & 103 · Short-Stay</div>
-          <p style="font-size:14px;color:var(--grey-400);margin-top:8px;">Premium Airbnb short-stay suites designed for comfort and convenience.</p>
-          <div class="property-card-footer">
-            <div class="price">From KES 3,800 <small>/night</small></div>
-            <span class="btn-book">View Units →</span>
+        <div class="property-content">
+          <h4>Honeycomb Suites</h4>
+          <div class="property-features">
+            <span>1-2 Beds</span>
+            <span>Modern Bath</span>
+            <span>Prime Location</span>
+          </div>
+          <div class="property-footer">
+            <div class="property-price">KES 8,500 <small>/night</small></div>
+            <span class="btn-view">View Details &rarr;</span>
           </div>
         </div>
       </a>
-      <!-- Bedrock Card -->
-      <a href="bedrock.html" class="property-card reveal" style="text-decoration:none;">
-        <div class="img-wrap">
-          <span class="badge badge-premium">Residential</span>
-          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80" alt="Bedrock Suites">
+
+      <!-- Bedrock -->
+      <a href="bedrock.html" class="property-card reveal">
+        <div class="property-img">
+          <span class="property-badge">Residential</span>
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Bedrock Suites">
         </div>
-        <div class="property-card-body">
-          <h4>🏗️ Bedrock Suites</h4>
-          <div class="location">📍 Units 80 & 81 · Long-Term</div>
-          <p style="font-size:14px;color:var(--grey-400);margin-top:8px;">Spacious residential apartments with a premium finish for modern living.</p>
-          <div class="property-card-footer">
-            <div class="price">From KES 40,000 <small>/month</small></div>
-            <span class="btn-book">View Units →</span>
+        <div class="property-content">
+          <h4>Bedrock Suites</h4>
+          <div class="property-features">
+            <span>2 Beds</span>
+            <span>2 Baths</span>
+            <span>Urban Center</span>
+          </div>
+          <div class="property-footer">
+            <div class="property-price">KES 40,000 <small>/month</small></div>
+            <span class="btn-view">View Details &rarr;</span>
           </div>
         </div>
       </a>
-      <!-- Vineyard Card -->
-      <a href="vineyard.html" class="property-card reveal" style="text-decoration:none;">
-        <div class="img-wrap">
-          <span class="badge badge-exclusive">Exclusive</span>
-          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80" alt="Vineyard House">
+
+      <!-- Vineyard -->
+      <a href="vineyard.html" class="property-card reveal">
+        <div class="property-img">
+          <span class="property-badge">Exclusive</span>
+          <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80" alt="Vineyard Luxury Homes">
         </div>
-        <div class="property-card-body">
-          <h4>🍇 Vineyard Luxury Homes</h4>
-          <div class="location">📍 Vineyard House · Flagship</div>
-          <p style="font-size:14px;color:var(--grey-400);margin-top:8px;">High-end exclusive residence where luxury meets nature in perfect harmony.</p>
-          <div class="property-card-footer">
-            <div class="price">Premium <small>by inquiry</small></div>
-            <span class="btn-book">Explore →</span>
+        <div class="property-content">
+          <h4>Vineyard Luxury Homes</h4>
+          <div class="property-features">
+            <span>4 Beds</span>
+            <span>3 Baths</span>
+            <span>Serene Suburbs</span>
+          </div>
+          <div class="property-footer">
+            <div class="property-price">Inquire <small>for price</small></div>
+            <span class="btn-view">View Details &rarr;</span>
           </div>
         </div>
       </a>
@@ -198,104 +201,66 @@
   </div>
 </section>
 
-<!-- UPCOMING DEVELOPMENTS -->
-<section id="developments">
+<!-- DEVELOPMENTS -->
+<section id="developments" style="background: rgba(255,255,255,0.3);">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-tag">Coming Soon</span>
-      <h2 class="section-title">Future Developments</h2>
-      <p class="section-desc">Explore our pipeline of upcoming projects designed to redefine premium living.</p>
+      <span class="section-tag">Upcoming</span>
+      <h2 class="section-title">New Developments</h2>
     </div>
     <div class="dev-grid">
       <div class="dev-card reveal">
-        <img class="dev-img" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Project Aurora">
-        <div class="dev-overlay">
-          <span class="coming-badge">Coming 2027</span>
-          <h4>Project Aurora</h4>
-          <p>Mixed-use luxury complex</p>
+        <div class="dev-img-box">
+          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&q=80" alt="Office Project">
+          <div class="dev-overlay"><span>Coming Soon</span></div>
         </div>
-        <div class="dev-card-footer">
-          <div class="dev-progress"><div class="dev-progress-bar" style="width:35%"></div></div>
-          <div class="meta"><span>Planning Phase</span><span>35%</span></div>
-        </div>
-      </div>
-      <div class="dev-card reveal">
-        <img class="dev-img" src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&q=80" alt="Amber Residences">
-        <div class="dev-overlay">
-          <span class="coming-badge">Coming 2027</span>
-          <h4>Amber Residences</h4>
-          <p>Executive apartments</p>
-        </div>
-        <div class="dev-card-footer">
-          <div class="dev-progress"><div class="dev-progress-bar" style="width:20%"></div></div>
-          <div class="meta"><span>Concept Stage</span><span>20%</span></div>
+        <div class="dev-content">
+          <h4>Corporate Suites</h4>
+          <p>Modern office spaces tailored for efficiency and prestige.</p>
+          <div class="dev-progress-box">
+            <div class="dev-progress-bar"><div class="dev-progress-fill" style="width: 35%"></div></div>
+            <div class="dev-meta"><span>Planning Phase</span><span>35%</span></div>
+          </div>
         </div>
       </div>
       <div class="dev-card reveal">
-        <img class="dev-img" src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=600&q=80" alt="The Crest Villas">
-        <div class="dev-overlay">
-          <span class="coming-badge">Coming 2028</span>
-          <h4>The Crest Villas</h4>
-          <p>Gated luxury community</p>
+        <div class="dev-img-box">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=600&q=80" alt="Apartment Project">
+          <div class="dev-overlay"><span>Coming Soon</span></div>
         </div>
-        <div class="dev-card-footer">
-          <div class="dev-progress"><div class="dev-progress-bar" style="width:10%"></div></div>
-          <div class="meta"><span>Site Acquisition</span><span>10%</span></div>
+        <div class="dev-content">
+          <h4>Skyline Apartments</h4>
+          <p>Luxury high-rise living with unparalleled views.</p>
+          <div class="dev-progress-box">
+            <div class="dev-progress-bar"><div class="dev-progress-fill" style="width: 15%"></div></div>
+            <div class="dev-meta"><span>Foundation</span><span>15%</span></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TRUST VAULT -->
-<section id="trust">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Transparency</span>
-      <h2 class="section-title">The Trust Vault</h2>
-      <p class="section-desc">Access verified title deeds, legal documentation, and project credentials — all in one place.</p>
-    </div>
-    <div class="trust-grid">
-      <div class="trust-card reveal">
-        <div class="trust-icon">📜</div>
-        <h4>Title Deeds</h4>
-        <p>All properties backed by verified and registered title deeds, accessible for review.</p>
-        <button class="btn-view">View Documents</button>
-      </div>
-      <div class="trust-card reveal">
-        <div class="trust-icon">🔒</div>
-        <h4>Legal Compliance</h4>
-        <p>Fully compliant with local regulatory frameworks, building codes, and environmental guidelines.</p>
-        <button class="btn-view">Learn More</button>
-      </div>
-      <div class="trust-card reveal">
-        <div class="trust-icon">🏦</div>
-        <h4>Investment Security</h4>
-        <p>Transparent financial reporting and third-party audited records to protect your investment.</p>
-        <button class="btn-view">See Reports</button>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer class="footer">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo"><div class="nav-logo-icon">C</div><div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div></a>
-        <p>Elevating property management through trust, luxury, and innovation.</p>
-      </div>
-      <div class="footer-col"><h5>Properties</h5><ul><li><a href="honeycomb.html">Honeycomb Suites</a></li><li><a href="bedrock.html">Bedrock Suites</a></li><li><a href="vineyard.html">Vineyard House</a></li></ul></div>
-      <div class="footer-col"><h5>Company</h5><ul><li><a href="#trust">Trust Vault</a></li><li><a href="#developments">Developments</a></li><li><a href="contact.html">Contact Us</a></li></ul></div>
-      <div class="footer-col"><h5>Legal</h5><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li></ul></div>
-    </div>
     <div class="footer-bottom">
-      <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
-      <div class="footer-socials"><a href="#">📷</a><a href="#">🐦</a><a href="#">💼</a><a href="#">💬</a></div>
+      <p>&copy; 2026 Chanan Property Ventures. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="#">Instagram</a>
+        <a href="#">Twitter</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">WhatsApp</a>
+      </div>
     </div>
   </div>
 </footer>
+
+<!-- WHATSAPP FLOATING BUTTON -->
+<a href="https://wa.me/254708085734?text=Hello%20Chanan%20Property%20Ventures!%20I%27m%20interested%20in%20your%20properties." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <span class="wa-pulse"></span>
+  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  Chat with Us
+</a>
 
 <script src="script.js"></script>
 </body>
