@@ -100,22 +100,29 @@ function calcPrice() {
 function submitBookingInquiry(e) {
   e.preventDefault();
 
-  const name    = document.getElementById('guestName')?.value.trim()    || '';
-  const phone   = document.getElementById('guestPhone')?.value.trim()   || '';
-  const unit    = document.getElementById('guestUnit')?.value           || '';
-  const nights  = document.getElementById('guestNights')?.value         || '';
-  const message = document.getElementById('guestMessage')?.value.trim() || '';
+  const name       = document.getElementById('guestName')?.value.trim()    || '';
+  const phone      = document.getElementById('guestPhone')?.value.trim()   || '';
+  const unit       = document.getElementById('guestUnit')?.value           || '';
+  const nights     = document.getElementById('guestNights')?.value         || '';
+  const moveInDate = document.getElementById('moveInDate')?.value          || '';
+  const tourDate   = document.getElementById('tourDate')?.value            || '';
+  const message    = document.getElementById('guestMessage')?.value.trim() || '';
 
-  if (!name || !phone || !nights) return;
+  if (!name || !phone) return;
+
+  let details = '';
+  if (nights) details += `Stay: ${nights} nights\n`;
+  if (moveInDate) details += `Planned Move-in: ${moveInDate}\n`;
+  if (tourDate) details += `Requested Tour Date: ${tourDate}\n`;
 
   const text = encodeURIComponent(
     `Hello Chanan Property Ventures!\n\n` +
-    `*Booking Inquiry*\n` +
+    `*Inquiry Form Submission*\n` +
     `Name: ${name}\n` +
     `Phone: ${phone}\n` +
     `Unit: ${unit}\n` +
-    `Nights: ${nights}\n` +
-    (message ? `Special Requests: ${message}\n` : '') +
+    details +
+    (message ? `Message: ${message}\n` : '') +
     `\nPlease confirm availability. Thank you!`
   );
 
