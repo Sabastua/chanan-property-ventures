@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bedrock Suites | Chanan Property Ventures</title>
-  <meta name="description" content="Bedrock Suites — Premium residential apartments Units 80 & 81 by Chanan Property Ventures. Your ideal urban home.">
+  <meta name="description"
+    content="Bedrock Suites — Premium residential apartments Units 80 & 81 by Chanan Property Ventures. Your ideal urban home.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="images/LOGO.jpeg">
   <style>
@@ -16,46 +18,198 @@
     }
 
     body {
-      background-color: #E2E8F0; /* Darker slate background */
+      background-color: #E2E8F0;
+      /* Darker slate background */
     }
 
-    .page-hero{width:100%;aspect-ratio:16/9;min-height:50vh;max-height:800px;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:140px}
-    .slider-bg{position:absolute;inset:0;z-index:0}
-    .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:slideFade 30s infinite linear}
-    .slide:nth-child(1){animation-delay:0s}
-    .slide:nth-child(2){animation-delay:6s}
-    .slide:nth-child(3){animation-delay:12s}
-    .slide:nth-child(4){animation-delay:18s}
-    .slide:nth-child(5){animation-delay:24s}
-    @keyframes slideFade{
-      0%{opacity:0;transform:scale(1)}
-      3%{opacity:1;transform:scale(1.01)}
-      20%{opacity:1;transform:scale(1.05)}
-      23%{opacity:0;transform:scale(1.06)}
-      100%{opacity:0;transform:scale(1.06)}
+    .page-hero {
+      width: 100%;
+      aspect-ratio: 16/9;
+      min-height: 50vh;
+      max-height: 800px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 140px
     }
-    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(71, 85, 105, 0.8),rgba(30, 41, 59, 0.65));z-index:1}
-    .page-hero .container{position:relative;z-index:2}
-    .page-hero h1{font-size:clamp(32px,4vw,56px);margin-bottom:12px;color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.2);}
-    .page-hero h1 .accent{color:var(--orange)}
-    .page-hero p{font-size:17px;color:rgba(255,255,255,0.9);max-width:600px;line-height:1.8}
-    .brand-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.3);border-radius:50px;font-size:13px;font-weight:600;color:#fff;margin-bottom:20px;backdrop-filter: blur(10px);}
-    
-    .unit-section{padding:80px 0}
-    .unit-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start;margin-bottom:80px}
-    .unit-layout.reverse{direction:rtl}.unit-layout.reverse>*{direction:ltr}
-    .unit-gallery{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-    .unit-gallery img{width:100%;height:400px;object-fit:cover;transition:var(--transition)}
-    .unit-gallery:hover img{transform:scale(1.03)}
-    .unit-details h3{font-size:28px;margin-bottom:8px;color: var(--grey-900);}
-    .unit-details .subtitle{color:var(--orange);font-size:13px;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
-    .unit-details p{color:var(--grey-700);line-height:1.8;margin-bottom:20px}
-    .amenities-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
+
+    .slider-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: slideFade 30s infinite linear
+    }
+
+    .slide:nth-child(1) {
+      animation-delay: 0s
+    }
+
+    .slide:nth-child(2) {
+      animation-delay: 6s
+    }
+
+    .slide:nth-child(3) {
+      animation-delay: 12s
+    }
+
+    .slide:nth-child(4) {
+      animation-delay: 18s
+    }
+
+    .slide:nth-child(5) {
+      animation-delay: 24s
+    }
+
+    @keyframes slideFade {
+      0% {
+        opacity: 0;
+        transform: scale(1)
+      }
+
+      3% {
+        opacity: 1;
+        transform: scale(1.01)
+      }
+
+      20% {
+        opacity: 1;
+        transform: scale(1.05)
+      }
+
+      23% {
+        opacity: 0;
+        transform: scale(1.06)
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1.06)
+      }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(71, 85, 105, 0.8), rgba(30, 41, 59, 0.65));
+      z-index: 1
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 2
+    }
+
+    .page-hero h1 {
+      font-size: clamp(32px, 4vw, 56px);
+      margin-bottom: 12px;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .page-hero h1 .accent {
+      color: var(--orange)
+    }
+
+    .page-hero p {
+      font-size: 17px;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 600px;
+      line-height: 1.8
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .unit-section {
+      padding: 80px 0
+    }
+
+    .unit-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-bottom: 80px
+    }
+
+    .unit-layout.reverse {
+      direction: rtl
+    }
+
+    .unit-layout.reverse>* {
+      direction: ltr
+    }
+
+    .unit-gallery {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow)
+    }
+
+    .unit-gallery img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transition: var(--transition)
+    }
+
+    .unit-gallery:hover img {
+      transform: scale(1.03)
+    }
+
+    .unit-details h3 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      color: var(--grey-900);
+    }
+
+    .unit-details .subtitle {
+      color: var(--orange);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px
+    }
+
+    .unit-details p {
+      color: var(--grey-700);
+      line-height: 1.8;
+      margin-bottom: 20px
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px
+    }
+
     .amenity {
-      display:flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
       background: rgba(226, 232, 240, 0.9);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
@@ -64,395 +218,478 @@
       font-size: 13px;
       font-weight: 700;
       color: var(--grey-800);
-      box-shadow: 0 4px 12px rgba(15,23,42,0.06);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
       transition: var(--transition);
     }
-    .amenity:hover{
+
+    .amenity:hover {
       transform: translateY(-2px);
       border-color: var(--orange);
       background: #fff;
     }
-    .unit-price{font-size:28px;font-weight:800;color:var(--orange);font-family:'Inter',sans-serif;margin-bottom:20px}
-    .unit-price small{font-size:14px;color:var(--grey-600);font-weight:400}
-    .gallery-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
-    .gallery-thumbs img{height:100px;border-radius:var(--radius-sm);cursor:pointer;transition:var(--transition);border:2px solid transparent}
-    .gallery-thumbs img:hover{border-color:var(--orange)}
-    @media(max-width:768px){.unit-layout,.unit-layout.reverse{grid-template-columns:1fr;direction:ltr}}
+
+    .unit-price {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--orange);
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 20px
+    }
+
+    .unit-price small {
+      font-size: 14px;
+      color: var(--grey-600);
+      font-weight: 400
+    }
+
+    .gallery-thumbs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 8px
+    }
+
+    .gallery-thumbs img {
+      height: 100px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      border: 2px solid transparent
+    }
+
+    .gallery-thumbs img:hover {
+      border-color: var(--orange)
+    }
+
+    @media(max-width:768px) {
+
+      .unit-layout,
+      .unit-layout.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr
+      }
+    }
 
     /* Grey theme adjustments for cards */
     .tool-card {
-        background: rgba(255, 255, 255, 0.8) !important;
-        border: 1px solid rgba(148, 163, 184, 0.5) !important;
-        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08) !important;
+      background: rgba(255, 255, 255, 0.8) !important;
+      border: 1px solid rgba(148, 163, 184, 0.5) !important;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08) !important;
     }
-    .rule-card, .nearby-card {
-        background: rgba(226, 232, 240, 0.7) !important;
-        border: 1px solid rgba(148, 163, 184, 0.4) !important;
+
+    .rule-card,
+    .nearby-card {
+      background: rgba(226, 232, 240, 0.7) !important;
+      border: 1px solid rgba(148, 163, 184, 0.4) !important;
     }
+
     .booking-form-card {
-        background: rgba(255, 255, 255, 0.9) !important;
-        border: 1px solid rgba(148, 163, 184, 0.5) !important;
-        box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1) !important;
+      background: rgba(255, 255, 255, 0.9) !important;
+      border: 1px solid rgba(148, 163, 184, 0.5) !important;
+      box-shadow: 0 20px 50px rgba(15, 23, 42, 0.1) !important;
     }
   </style>
 </head>
+
 <body id="top">
 
-<div class="liquid-bg">
-  <div class="blob blob-1" style="background: radial-gradient(circle, rgba(71, 85, 105, 0.1) 0%, rgba(71, 85, 105, 0) 70%);"></div>
-  <div class="blob blob-2" style="background: radial-gradient(circle, rgba(148, 163, 184, 0.1) 0%, rgba(148, 163, 184, 0) 70%);"></div>
-  <div class="blob blob-3" style="background: radial-gradient(circle, rgba(203, 213, 225, 0.1) 0%, rgba(203, 213, 225, 0) 70%);"></div>
-</div>
-
-<nav class="navbar" id="navbar">
-  <div class="container">
-    <a href="index.html" class="nav-logo">
-      <img src="images/LOGO.jpeg" alt="Chanan Logo" class="nav-logo-img">
-      <div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="honeycomb.html">Honeycomb Suites</a></li>
-      <li><a href="bedrock.html" style="color:var(--orange)">Bedrock Suites</a></li>
-      <li><a href="vineyard.html">Vineyard Luxury</a></li>
-    </ul>
-    <a href="contact.html" class="nav-cta">Get In Touch</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="liquid-bg">
+    <div class="blob blob-1"
+      style="background: radial-gradient(circle, rgba(71, 85, 105, 0.1) 0%, rgba(71, 85, 105, 0) 70%);"></div>
+    <div class="blob blob-2"
+      style="background: radial-gradient(circle, rgba(148, 163, 184, 0.1) 0%, rgba(148, 163, 184, 0) 70%);"></div>
+    <div class="blob blob-3"
+      style="background: radial-gradient(circle, rgba(203, 213, 225, 0.1) 0%, rgba(203, 213, 225, 0) 70%);"></div>
   </div>
-</nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose" aria-label="Close">X</button>
-  <a href="honeycomb.html">Honeycomb Suites</a>
-  <a href="bedrock.html">Bedrock Suites</a>
-  <a href="vineyard.html">Vineyard Luxury</a>
-  <a href="contact.html">Contact</a>
-</div>
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/LOGO.jpeg" alt="Chanan Logo" class="nav-logo-img">
+        <div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span
+            class="nav-logo-sub">Reliable Property Management</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="honeycomb.html">Honeycomb Suites</a></li>
+        <li><a href="bedrock.html" style="color:var(--orange)">Bedrock Suites</a></li>
+        <li><a href="vineyard.html">Vineyard Luxury</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Get In Touch</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
 
-<section class="page-hero reveal">
-  <div class="slider-bg">
-    <div class="slide" style="background-image: url('images/bedrock/DSC_0004.jpg')"></div>
-    <div class="slide" style="background-image: url('images/bedrock/DSC_0010.jpg')"></div>
-    <div class="slide" style="background-image: url('images/bedrock/DSC_0012.jpg')"></div>
-    <div class="slide" style="background-image: url('images/bedrock/DSC_0013.jpg')"></div>
-    <div class="slide" style="background-image: url('images/bedrock/DSC_0015.jpg')"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close">X</button>
+    <a href="honeycomb.html">Honeycomb Suites</a>
+    <a href="bedrock.html">Bedrock Suites</a>
+    <a href="vineyard.html">Vineyard Luxury</a>
+    <a href="contact.html">Contact</a>
   </div>
-  <div class="hero-overlay"></div>
-  <div class="container">
-    <div class="brand-badge">Airbnb Collection</div>
-    <h1>Bedrock <span class="accent">Suites</span></h1>
-    <p>Premium Airbnb short-stay units designed for modern travelers. Our Bedrock suites offer a perfect blend of sophisticated design, spacious layouts, and a serene grey-toned aesthetic.</p>
-  </div>
-</section>
 
-<section class="unit-section">
-  <div class="container">
-    <!-- Unit 80 -->
-    <div class="unit-layout reveal">
-      <div class="unit-gallery">
-        <img src="images/bedrock/DSC_0022.jpg" alt="Bedrock Suite 80" id="main80">
-        <div class="gallery-thumbs">
-          <img src="images/bedrock/DSC_0022.jpg" alt="Suite 80 Main" onclick="document.getElementById('main80').src=this.src">
-          <img src="images/bedrock/DSC_0027.jpg" alt="Suite 80 Detail" onclick="document.getElementById('main80').src=this.src">
-          <img src="images/bedrock/DSC_0029.jpg" alt="Suite 80 Living" onclick="document.getElementById('main80').src=this.src">
-        </div>
-      </div>
-      <div class="unit-details">
-        <div class="subtitle">Unit 80</div>
-        <h3>The Executive Residence</h3>
-        <p>A premium two-bedroom apartment featuring stone-inspired finishes, an expansive master bedroom, and a gourmet kitchen. Designed for those who appreciate refined urban living.</p>
-        <div class="amenities-grid">
-          <div class="amenity">2 Bedrooms</div>
-          <div class="amenity">2 Bathrooms</div>
-          <div class="amenity">Full Kitchen</div>
-          <div class="amenity">High-speed Fiber</div>
-          <div class="amenity">Master Ensuite</div>
-          <div class="amenity">Laundry Area</div>
-          <div class="amenity">Ample Storage</div>
-          <div class="amenity">Large Windows</div>
-        </div>
-        <div class="unit-price">KES 10,000 <small>/night</small></div>
-        <a href="https://airbnb.com" class="btn-primary">Book Now</a>
-      </div>
+  <section class="page-hero reveal">
+    <div class="slider-bg">
+      <div class="slide" style="background-image: url('images/bedrock/DSC_0004.jpg')"></div>
+      <div class="slide" style="background-image: url('images/bedrock/DSC_0010.jpg')"></div>
+      <div class="slide" style="background-image: url('images/bedrock/DSC_0012.jpg')"></div>
+      <div class="slide" style="background-image: url('images/bedrock/DSC_0013.jpg')"></div>
+      <div class="slide" style="background-image: url('images/bedrock/DSC_0015.jpg')"></div>
     </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="brand-badge">Airbnb Collection</div>
+      <h1>Bedrock <span class="accent">Suites</span></h1>
+      <p>Premium Airbnb short-stay units designed for modern travelers. Our Bedrock suites offer a perfect blend of
+        sophisticated design, spacious layouts, and a serene grey-toned aesthetic.</p>
+    </div>
+  </section>
 
-    <!-- Unit 81 -->
-    <div class="unit-layout reverse reveal">
-      <div class="unit-gallery">
-        <img src="images/bedrock/DSC_0150.jpg" alt="Bedrock Suite 81" id="main81">
-        <div class="gallery-thumbs">
-          <img src="images/bedrock/DSC_0150.jpg" alt="Suite 81 Main" onclick="document.getElementById('main81').src=this.src">
-          <img src="images/bedrock/DSC_0153.jpg" alt="Suite 81 Interior" onclick="document.getElementById('main81').src=this.src">
-          <img src="images/bedrock/DSC_0156.jpg" alt="Suite 81 Bedroom" onclick="document.getElementById('main81').src=this.src">
-        </div>
-      </div>
-      <div class="unit-details">
-        <div class="subtitle">Unit 81</div>
-        <h3>The Urban Sanctuary</h3>
-        <p>This beautifully balanced two-bedroom unit offers a peaceful retreat from the city. Featuring warm grey tones, natural lighting, and a functional open-plan layout.</p>
-        <div class="amenities-grid">
-          <div class="amenity">2 Bedrooms</div>
-          <div class="amenity">1 Bathroom</div>
-          <div class="amenity">Fitted Kitchen</div>
-          <div class="amenity">Fiber Internet</div>
-          <div class="amenity">Balcony View</div>
-          <div class="amenity">Secure Parking</div>
-          <div class="amenity">Modern Tiles</div>
-          <div class="amenity">Tiled Floors</div>
-        </div>
-        <div class="unit-price">KES 9,000 <small>/night</small></div>
-        <a href="https://airbnb.com" class="btn-primary">Book Now</a>
-      </div>
-    </div>
-
-    <div class="reveal" style="text-align:center; margin-top: 18px;">
-      <a href="bedrock-gallery.html" class="btn-outline">See more photos →</a>
-    </div>
-  </div>
-</section>
-
-<!-- STAY PLANNER + QUICK INFO -->
-<section style="padding: 80px 0;">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Plan Your Stay</span>
-      <h2 class="section-title">Stay Planner</h2>
-    </div>
-    <div class="tools-grid reveal">
-      <!-- Price Calculator -->
-      <div class="tool-card">
-        <h3>Price Estimator</h3>
-        <p class="tool-subtitle">Get an instant cost estimate for your stay.</p>
-        <div class="calc-inputs">
-          <div class="calc-input-group">
-            <label>Select Unit</label>
-            <select id="unitSelect" onchange="calcPrice()">
-              <option value="10000">Unit 80 — KES 10,000/night</option>
-              <option value="9000">Unit 81 — KES 9,000/night</option>
-            </select>
-          </div>
-          <div class="calc-input-group">
-            <label>Number of Nights</label>
-            <input type="number" id="nightsInput" value="2" min="1" max="30" oninput="calcPrice()">
+  <section class="unit-section">
+    <div class="container">
+      <!-- Unit 80 -->
+      <div class="unit-layout reveal">
+        <div class="unit-gallery">
+          <img src="images/bedrock/DSC_0022.jpg" alt="Bedrock Suite 80" id="main80">
+          <div class="gallery-thumbs">
+            <img src="images/bedrock/DSC_0022.jpg" alt="Suite 80 Main"
+              onclick="document.getElementById('main80').src=this.src">
+            <img src="images/bedrock/DSC_0027.jpg" alt="Suite 80 Detail"
+              onclick="document.getElementById('main80').src=this.src">
+            <img src="images/bedrock/DSC_0029.jpg" alt="Suite 80 Living"
+              onclick="document.getElementById('main80').src=this.src">
           </div>
         </div>
-        <div class="price-row"><span>Nightly Rate</span><strong id="calcNightly">KES 10,000</strong></div>
-        <div class="price-row"><span>Nights</span><strong id="calcNights">2</strong></div>
-        <div class="price-row"><span>Cleaning Fee</span><strong>KES 1,500</strong></div>
-        <div class="price-total">
-          <div class="total-label">Estimated Total</div>
-          <div class="total-amount" id="calcTotal">KES 21,500</div>
+        <div class="unit-details">
+          <div class="subtitle">Unit 80</div>
+          <h3>The Executive Residence</h3>
+          <p>A premium two-bedroom apartment featuring stone-inspired finishes, an expansive master bedroom, and a
+            gourmet kitchen. Designed for those who appreciate refined urban living.</p>
+          <div class="amenities-grid">
+            <div class="amenity">2 Bedrooms</div>
+            <div class="amenity">2 Bathrooms</div>
+            <div class="amenity">Full Kitchen</div>
+            <div class="amenity">High-speed Fiber</div>
+            <div class="amenity">Master Ensuite</div>
+            <div class="amenity">Laundry Area</div>
+            <div class="amenity">Ample Storage</div>
+            <div class="amenity">Large Windows</div>
+          </div>
+          <div class="unit-price">KES 10,000 <small>/night</small></div>
+          <a href="https://airbnb.com" class="btn-primary">Book Now</a>
         </div>
-        <a id="waCalcLink" href="https://wa.me/254708085734?text=Hello!%20I%27d%20like%20to%20book%20Unit%2080%20at%20Bedrock%20Suites." class="wa-book-btn" target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          Inquire via WhatsApp
-        </a>
       </div>
 
-      <!-- Quick Info Card -->
-      <div class="tool-card">
-        <h3>Good to Know</h3>
-        <p class="tool-subtitle">Everything you need before you arrive.</p>
-        <div class="price-row"><span>Check-in</span><strong>From 2:00 PM</strong></div>
-        <div class="price-row"><span>Check-out</span><strong>By 11:00 AM</strong></div>
-        <div class="price-row"><span>Access</span><strong>Self Check-in</strong></div>
-        <div class="price-row"><span>Max Guests</span><strong>4 per unit</strong></div>
-        <div class="price-row"><span>Pets</span><strong>Not Allowed</strong></div>
-        <div class="price-row"><span>Smoking</span><strong>Not Allowed</strong></div>
-        <div class="price-row"><span>Events</span><strong>Not Allowed</strong></div>
-        <div class="price-row"><span>Parking</span><strong>Free & Secure</strong></div>
+      <!-- Unit 81 -->
+      <div class="unit-layout reverse reveal">
+        <div class="unit-gallery">
+          <img src="images/bedrock/DSC_0150.jpg" alt="Bedrock Suite 81" id="main81">
+          <div class="gallery-thumbs">
+            <img src="images/bedrock/DSC_0150.jpg" alt="Suite 81 Main"
+              onclick="document.getElementById('main81').src=this.src">
+            <img src="images/bedrock/DSC_0153.jpg" alt="Suite 81 Interior"
+              onclick="document.getElementById('main81').src=this.src">
+            <img src="images/bedrock/DSC_0156.jpg" alt="Suite 81 Bedroom"
+              onclick="document.getElementById('main81').src=this.src">
+          </div>
+        </div>
+        <div class="unit-details">
+          <div class="subtitle">Unit 81</div>
+          <h3>The Urban Sanctuary</h3>
+          <p>This beautifully balanced two-bedroom unit offers a peaceful retreat from the city. Featuring warm grey
+            tones, natural lighting, and a functional open-plan layout.</p>
+          <div class="amenities-grid">
+            <div class="amenity">2 Bedrooms</div>
+            <div class="amenity">1 Bathroom</div>
+            <div class="amenity">Fitted Kitchen</div>
+            <div class="amenity">Fiber Internet</div>
+            <div class="amenity">Balcony View</div>
+            <div class="amenity">Secure Parking</div>
+            <div class="amenity">Modern Tiles</div>
+            <div class="amenity">Tiled Floors</div>
+          </div>
+          <div class="unit-price">KES 9,000 <small>/night</small></div>
+          <a href="https://airbnb.com" class="btn-primary">Book Now</a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- HOUSE RULES -->
-<section style="padding: 60px 0; background: rgba(226, 232, 240, 0.3);">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Before You Book</span>
-      <h2 class="section-title">House Rules</h2>
-    </div>
-    <div class="rules-grid reveal">
-      <div class="rule-card">
-        <span class="rule-icon">Time</span>
-        <div><h4>Check-in / Check-out</h4><p>Check-in from 2:00 PM. Check-out by 11:00 AM. Late check-out by prior arrangement only.</p></div>
-      </div>
-      <div class="rule-card">
-        <span class="rule-icon">Quiet</span>
-        <div><h4>Quiet Hours</h4><p>Please respect quiet hours between 10:00 PM and 8:00 AM to ensure comfort for all residents.</p></div>
-      </div>
-      <div class="rule-card">
-        <span class="rule-icon">No</span>
-        <div><h4>No Smoking</h4><p>Strictly no smoking inside the unit. A designated smoking area is available outside the building.</p></div>
-      </div>
-      <div class="rule-card">
-        <span class="rule-icon">No</span>
-        <div><h4>No Pets</h4><p>We regret that pets are not permitted in the suites at this time.</p></div>
-      </div>
-      <div class="rule-card">
-        <span class="rule-icon">No</span>
-        <div><h4>No Parties or Events</h4><p>The suites are designed for peaceful stays. Parties and large gatherings are not permitted.</p></div>
-      </div>
-      <div class="rule-card">
-        <span class="rule-icon">Care</span>
-        <div><h4>Leave it Tidy</h4><p>Please leave the unit in the same condition as you found it. A cleaning fee of KES 1,500 applies.</p></div>
+      <div class="reveal" style="text-align:center; margin-top: 18px;">
+        <a href="bedrock-gallery.html" class="btn-outline">See more photos →</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- NEARBY ATTRACTIONS -->
-<section style="padding: 80px 0;">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">The Neighborhood</span>
-      <h2 class="section-title">Nearby Bedrock</h2>
-    </div>
-    <div class="nearby-grid reveal">
-      <div class="nearby-card">
-        <div class="nearby-icon">Shop</div>
-        <h4>Main Mall</h4>
-        <p>The Junction / Hub</p>
-        <span class="distance">~10 min drive</span>
+  <!-- STAY PLANNER + QUICK INFO -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Plan Your Stay</span>
+        <h2 class="section-title">Stay Planner</h2>
       </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">Sch</div>
-        <h4>Schools</h4>
-        <p>Leading international schools</p>
-        <span class="distance">~15 min drive</span>
-      </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">Med</div>
-        <h4>Hospital</h4>
-        <p>City Hospital Annex</p>
-        <span class="distance">~5 min drive</span>
-      </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">Bank</div>
-        <h4>Banking</h4>
-        <p>All major banks nearby</p>
-        <span class="distance">~5 min walk</span>
-      </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">Fuel</div>
-        <h4>Petrol Station</h4>
-        <p>Shell / TotalEnergies</p>
-        <span class="distance">~2 min drive</span>
-      </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">Park</div>
-        <h4>Green Space</h4>
-        <p>Community park</p>
-        <span class="distance">~8 min walk</span>
-      </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">Gym</div>
-        <h4>Fitness Hub</h4>
-        <p>Full service gym</p>
-        <span class="distance">~5 min walk</span>
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="tools-grid reveal">
+        <!-- Price Calculator -->
+        <div class="tool-card">
+          <h3>Price Estimator</h3>
+          <p class="tool-subtitle">Get an instant cost estimate for your stay.</p>
+          <div class="calc-inputs">
+            <div class="calc-input-group">
+              <label>Select Unit</label>
+              <select id="unitSelect" onchange="calcPrice()">
+                <option value="10000">Unit 80 — KES 10,000/night</option>
+                <option value="9000">Unit 81 — KES 9,000/night</option>
+              </select>
+            </div>
+            <div class="calc-input-group">
+              <label>Number of Nights</label>
+              <input type="number" id="nightsInput" value="2" min="1" max="30" oninput="calcPrice()">
+            </div>
+          </div>
+          <div class="price-row"><span>Nightly Rate</span><strong id="calcNightly">KES 10,000</strong></div>
+          <div class="price-row"><span>Nights</span><strong id="calcNights">2</strong></div>
+          <div class="price-row"><span>Cleaning Fee</span><strong>KES 1,500</strong></div>
+          <div class="price-total">
+            <div class="total-label">Estimated Total</div>
+            <div class="total-amount" id="calcTotal">KES 21,500</div>
+          </div>
+          <a id="waCalcLink"
+            href="https://wa.me/254708085734?text=Hello!%20I%27d%20like%20to%20book%20Unit%2080%20at%20Bedrock%20Suites."
+            class="wa-book-btn" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+            Inquire via WhatsApp
+          </a>
+        </div>
 
-<!-- BOOKING INQUIRY FORM -->
-<section style="padding: 60px 0 100px; background: rgba(226, 232, 240, 0.3);">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Get In Touch</span>
-      <h2 class="section-title">Send a Booking Inquiry</h2>
+        <!-- Quick Info Card -->
+        <div class="tool-card">
+          <h3>Good to Know</h3>
+          <p class="tool-subtitle">Everything you need before you arrive.</p>
+          <div class="price-row"><span>Check-in</span><strong>From 2:00 PM</strong></div>
+          <div class="price-row"><span>Check-out</span><strong>By 11:00 AM</strong></div>
+          <div class="price-row"><span>Access</span><strong>Self Check-in</strong></div>
+          <div class="price-row"><span>Max Guests</span><strong>4 per unit</strong></div>
+          <div class="price-row"><span>Pets</span><strong>Not Allowed</strong></div>
+          <div class="price-row"><span>Smoking</span><strong>Not Allowed</strong></div>
+          <div class="price-row"><span>Events</span><strong>Not Allowed</strong></div>
+          <div class="price-row"><span>Parking</span><strong>Free & Secure</strong></div>
+        </div>
+      </div>
     </div>
-    <div class="booking-form-card reveal">
-      <h3>Reserve Your Suite</h3>
-      <p class="form-subtitle">Fill in your details and we'll confirm availability within the hour via WhatsApp.</p>
-      <form id="bookingForm" onsubmit="submitBookingInquiry(event)">
-        <div class="form-row">
+  </section>
+
+  <!-- HOUSE RULES -->
+  <section style="padding: 60px 0; background: rgba(226, 232, 240, 0.3);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Before You Book</span>
+        <h2 class="section-title">House Rules</h2>
+      </div>
+      <div class="rules-grid reveal">
+        <div class="rule-card">
+          <span class="rule-icon">Time</span>
+          <div>
+            <h4>Check-in / Check-out</h4>
+            <p>Check-in from 2:00 PM. Check-out by 11:00 AM. Late check-out by prior arrangement only.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-icon">Quiet</span>
+          <div>
+            <h4>Quiet Hours</h4>
+            <p>Please respect quiet hours between 10:00 PM and 8:00 AM to ensure comfort for all residents.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-icon">No</span>
+          <div>
+            <h4>No Smoking</h4>
+            <p>Strictly no smoking inside the unit. A designated smoking area is available outside the building.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-icon">No</span>
+          <div>
+            <h4>No Pets</h4>
+            <p>We regret that pets are not permitted in the suites at this time.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-icon">No</span>
+          <div>
+            <h4>No Parties or Events</h4>
+            <p>The suites are designed for peaceful stays. Parties and large gatherings are not permitted.</p>
+          </div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-icon">Care</span>
+          <div>
+            <h4>Leave it Tidy</h4>
+            <p>Please leave the unit in the same condition as you found it. A cleaning fee of KES 1,500 applies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEARBY ATTRACTIONS -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">The Neighborhood</span>
+        <h2 class="section-title">Nearby Bedrock</h2>
+      </div>
+      <div class="nearby-grid reveal">
+        <div class="nearby-card">
+          <div class="nearby-icon">Shop</div>
+          <h4>Main Mall</h4>
+          <p>The Junction / Hub</p>
+          <span class="distance">~10 min drive</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">Sch</div>
+          <h4>Schools</h4>
+          <p>Leading international schools</p>
+          <span class="distance">~15 min drive</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">Med</div>
+          <h4>Hospital</h4>
+          <p>City Hospital Annex</p>
+          <span class="distance">~5 min drive</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">Bank</div>
+          <h4>Banking</h4>
+          <p>All major banks nearby</p>
+          <span class="distance">~5 min walk</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">Fuel</div>
+          <h4>Petrol Station</h4>
+          <p>Shell / TotalEnergies</p>
+          <span class="distance">~2 min drive</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">Park</div>
+          <h4>Green Space</h4>
+          <p>Community park</p>
+          <span class="distance">~8 min walk</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">Gym</div>
+          <h4>Fitness Hub</h4>
+          <p>Full service gym</p>
+          <span class="distance">~5 min walk</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING INQUIRY FORM -->
+  <section style="padding: 60px 0 100px; background: rgba(226, 232, 240, 0.3);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Send a Booking Inquiry</h2>
+      </div>
+      <div class="booking-form-card reveal">
+        <h3>Reserve Your Suite</h3>
+        <p class="form-subtitle">Fill in your details and we'll confirm availability within the hour via WhatsApp.</p>
+        <form id="bookingForm" onsubmit="submitBookingInquiry(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" id="guestName" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" id="guestPhone" placeholder="+254 700 000000" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Unit Preference</label>
+              <select id="guestUnit">
+                <option>Unit 80 — The Executive Residence</option>
+                <option>Unit 81 — The Urban Sanctuary</option>
+                <option>Either unit is fine</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Number of Nights</label>
+              <input type="number" id="guestNights" placeholder="e.g. 3" min="1" required>
+            </div>
+          </div>
           <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" id="guestName" placeholder="Your full name" required>
+            <label>Special Requests (optional)</label>
+            <textarea id="guestMessage" rows="3"
+              placeholder="Early check-in, dietary needs, or anything else…"></textarea>
           </div>
-          <div class="form-group">
-            <label>Phone / WhatsApp</label>
-            <input type="tel" id="guestPhone" placeholder="+254 700 000000" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Unit Preference</label>
-            <select id="guestUnit">
-              <option>Unit 80 — The Executive Residence</option>
-              <option>Unit 81 — The Urban Sanctuary</option>
-              <option>Either unit is fine</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Number of Nights</label>
-            <input type="number" id="guestNights" placeholder="e.g. 3" min="1" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Special Requests (optional)</label>
-          <textarea id="guestMessage" rows="3" placeholder="Early check-in, dietary needs, or anything else…"></textarea>
-        </div>
-        <button type="submit" class="booking-submit">Send Inquiry via WhatsApp →</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-bottom">
-      <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
-      <div class="footer-socials">
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">WhatsApp</a>
+          <button type="submit" class="booking-submit">Send Inquiry via WhatsApp →</button>
+        </form>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- WHATSAPP FLOATING BUTTON -->
-<a href="https://wa.me/254708085734?text=Hello%20Chanan!%20I%27m%20interested%20in%20Bedrock%20Suites." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <span class="wa-pulse"></span>
-  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-  Inquire Now
-</a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
-<script>
-  // Bedrock-specific price calculator logic (Airbnb Style)
-  function calcPrice() {
-    const unitSelect  = document.getElementById('unitSelect');
-    const nightsInput = document.getElementById('nightsInput');
-    const calcNightly = document.getElementById('calcNightly');
-    const calcNightsEl= document.getElementById('calcNights');
-    const calcTotal   = document.getElementById('calcTotal');
-    const waCalcLink  = document.getElementById('waCalcLink');
-    
-    if (!unitSelect || !nightsInput) return;
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/254708085734?text=Hello%20Chanan!%20I%27m%20interested%20in%20Bedrock%20Suites."
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="wa-pulse"></span>
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+    Inquire Now
+  </a>
 
-    const rate        = parseInt(unitSelect.value, 10);
-    const nights      = Math.max(1, parseInt(nightsInput.value, 10) || 1);
-    const cleaningFee = 1500;
-    const total       = rate * nights + cleaningFee;
+  <script src="script.js"></script>
+  <script>
+    // Bedrock-specific price calculator logic (Airbnb Style)
+    function calcPrice() {
+      const unitSelect = document.getElementById('unitSelect');
+      const nightsInput = document.getElementById('nightsInput');
+      const calcNightly = document.getElementById('calcNightly');
+      const calcNightsEl = document.getElementById('calcNights');
+      const calcTotal = document.getElementById('calcTotal');
+      const waCalcLink = document.getElementById('waCalcLink');
 
-    if (calcNightly) calcNightly.textContent  = 'KES ' + rate.toLocaleString();
-    if (calcNightsEl) calcNightsEl.textContent = nights;
-    if (calcTotal)  calcTotal.textContent   = 'KES ' + total.toLocaleString();
+      if (!unitSelect || !nightsInput) return;
 
-    const unitName = unitSelect.options[unitSelect.selectedIndex].text.split(' \u2014 ')[0];
-    if (waCalcLink) {
-      waCalcLink.href = "https://wa.me/254708085734?text=Hello!%20I%27d%20like%20to%20book%20" + encodeURIComponent(unitName) + "%20at%20Bedrock%20Suites%20for%20" + nights + "%20nights.";
+      const rate = parseInt(unitSelect.value, 10);
+      const nights = Math.max(1, parseInt(nightsInput.value, 10) || 1);
+      const cleaningFee = 1500;
+      const total = rate * nights + cleaningFee;
+
+      if (calcNightly) calcNightly.textContent = 'KES ' + rate.toLocaleString();
+      if (calcNightsEl) calcNightsEl.textContent = nights;
+      if (calcTotal) calcTotal.textContent = 'KES ' + total.toLocaleString();
+
+      const unitName = unitSelect.options[unitSelect.selectedIndex].text.split(' \u2014 ')[0];
+      if (waCalcLink) {
+        waCalcLink.href = "https://wa.me/254708085734?text=Hello!%20I%27d%20like%20to%20book%20" + encodeURIComponent(unitName) + "%20at%20Bedrock%20Suites%20for%20" + nights + "%20nights.";
+      }
     }
-  }
-  
-  // Initialize
-  window.onload = function() {
-    calcPrice();
-  };
-</script>
+
+    // Initialize
+    window.onload = function () {
+      calcPrice();
+    };
+  </script>
 </body>
+
 </html>
