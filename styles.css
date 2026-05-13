@@ -39,6 +39,58 @@
   --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Premium Price Display */
+.unit-price-container {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.unit-price-old {
+  font-size: 18px;
+  color: var(--grey-400);
+  text-decoration: line-through;
+  position: relative;
+  opacity: 0.7;
+}
+.unit-price-old::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--orange);
+  transform: translateY(-50%);
+  animation: strikeThrough 1s ease-out forwards 0.5s;
+}
+@keyframes strikeThrough {
+  to { width: 100%; }
+}
+.unit-price-current {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--orange);
+  font-family: 'Inter', sans-serif;
+}
+.unit-price-current small {
+  font-size: 14px;
+  color: var(--grey-400);
+  font-weight: 400;
+}
+
+/* Card Specific Price Styling */
+.property-card .unit-price-container {
+  gap: 8px;
+  margin-bottom: 0;
+}
+.property-card .unit-price-old {
+  font-size: 13px;
+}
+.property-card .unit-price-current {
+  font-size: 20px;
+}
+
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -1368,4 +1420,127 @@ section { padding: 100px 0; }
 .btn-view-project:hover {
   background: var(--text-main);
   color: #fff;
+}
+
+/* Gamified House Rules - Horizontal Slider */
+.rules-container-gamified {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 24px;
+  padding: 20px 4px 40px;
+  margin-top: 40px;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE/Edge */
+}
+
+.rules-container-gamified::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.rule-quest-card {
+  flex: 0 0 320px;
+  scroll-snap-align: center;
+  position: relative;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  padding: 36px 32px;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.rule-quest-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  border-color: var(--orange);
+  box-shadow: var(--glass-shadow-strong);
+}
+
+.rule-summary-badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  color: var(--orange);
+  background: rgba(232, 114, 42, 0.08);
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rule-quest-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.rule-badge {
+  padding: 6px 12px;
+  background: rgba(232, 114, 42, 0.1);
+  border: 1px solid rgba(232, 114, 42, 0.2);
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.rule-status {
+  width: 12px;
+  height: 12px;
+  background: #10B981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #10B981;
+}
+
+.rule-quest-content {
+  position: relative;
+  z-index: 1;
+}
+
+.rule-quest-content h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.rule-quest-content p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.rule-progress-bar {
+  height: 6px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.rule-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--orange), var(--orange-light));
+  width: 100%;
+  border-radius: 10px;
+}
+
+.rule-icon-floating {
+  position: absolute;
+  bottom: -20px;
+  right: -10px;
+  font-size: 80px;
+  opacity: 0.03;
+  transform: rotate(-15deg);
+  pointer-events: none;
 }

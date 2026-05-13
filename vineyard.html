@@ -109,7 +109,7 @@
   </div>
   <div class="hero-overlay"></div>
   <div class="container">
-    <div class="brand-badge">Flagship Luxury</div>
+    <div class="brand-badge">Airbnb Collection</div>
     <h1>Vineyard <span class="accent">Luxury Homes</span></h1>
     <p>Discover the pinnacle of high-end living. Our Vineyard residences offer unmatched luxury, privacy, and architectural brilliance for the discerning few.</p>
   </div>
@@ -141,21 +141,47 @@
           <div class="amenity">Private Gym</div>
           <div class="amenity">Solar Backup</div>
         </div>
-        <div class="unit-price">Price Upon Request</div>
-        <a href="contact.html" class="btn-primary">Schedule a Viewing</a>
+        <div class="unit-price-container">
+          <span class="unit-price-old">KES 8,000</span>
+          <div class="unit-price-current">KES 7,500 <small>/night</small></div>
+        </div>
+        <a href="https://airbnb.com" class="btn-primary">Book Now</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- STAY PLANNER / INQUIRY -->
-<section style="padding: 80px 0;">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Luxury Experience</span>
-      <h2 class="section-title">Investment Planner</h2>
+      <span class="section-tag">Plan Your Stay</span>
+      <h2 class="section-title">Stay Planner</h2>
     </div>
     <div class="tools-grid reveal">
+      <!-- Price Calculator -->
+      <div class="tool-card">
+        <h3>Price Estimator</h3>
+        <p class="tool-subtitle">Get an instant cost estimate for your stay.</p>
+        <div class="calc-inputs">
+          <div class="calc-input-group">
+            <label>Select Unit</label>
+            <select id="unitSelect" onchange="calcPrice()">
+              <option value="7500">The Vineyard Estate — KES 7,500/night</option>
+            </select>
+          </div>
+          <div class="calc-input-group">
+            <label>Number of Nights</label>
+            <input type="number" id="nightsInput" value="2" min="1" max="30" oninput="calcPrice()">
+          </div>
+        </div>
+        <div class="price-row"><span>Nightly Rate</span><strong id="calcNightly">KES 7,500</strong></div>
+        <div class="price-row"><span>Nights</span><strong id="calcNights">2</strong></div>
+        <div class="price-total">
+          <div class="total-label">Estimated Total</div>
+          <div class="total-amount" id="calcTotal">KES 15,000</div>
+        </div>
+        <a id="waCalcLink" href="https://wa.me/254708085734?text=Hello!%20I%27d%20like%20to%20book%20The%20Vineyard%20Estate." class="wa-book-btn" target="_blank">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          Book via WhatsApp
+        </a>
+      </div>
       <!-- Info Card 1 -->
       <div class="tool-card">
         <h3>Property Highlights</h3>
@@ -183,40 +209,71 @@
   </div>
 </section>
 
-<!-- HOUSE RULES / GUIDELINES -->
+<!-- ELITE GUIDELINES -->
 <section style="padding: 60px 0; background: rgba(255,255,255,0.3);">
   <div class="container">
     <div class="section-header reveal">
-      <span class="section-tag">The Standard</span>
-      <h2 class="section-title">Living Guidelines</h2>
+      <span class="section-tag">Elite Missions</span>
+      <h2 class="section-title">The Standard</h2>
+      <p style="font-size: 13px; color: var(--orange); margin-top: 10px; font-weight: 600;">← Swipe to reveal your missions →</p>
     </div>
-    <div class="rules-grid reveal">
-      <div class="rule-card">
-        <span class="rule-icon">Care</span>
-        <div><h4>Property Care</h4><p>We maintain our properties to the highest standards and expect residents to do the same.</p></div>
+    
+    <div class="rules-container-gamified reveal">
+      <!-- Care Quest -->
+      <div class="rule-quest-card">
+        <div class="rule-quest-header">
+          <span class="rule-badge">Elite Task 1</span>
+          <div class="rule-status"></div>
+        </div>
+        <div class="rule-quest-content">
+          <span class="rule-summary-badge">Protect Home</span>
+          <h4>The Curator Quest</h4>
+          <p>Preserve the masterpiece. We maintain the highest standards and invite you to do the same.</p>
+          <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+        </div>
+        <span class="rule-icon-floating">🏛️</span>
       </div>
-      <div class="rule-card">
-        <span class="rule-icon">Privacy</span>
-        <div><h4>Privacy & Peace</h4><p>Respect the tranquility of the neighborhood. Noise should be kept to a minimum.</p></div>
+
+      <!-- Peace Quest -->
+      <div class="rule-quest-card">
+        <div class="rule-quest-header">
+          <span class="rule-badge">Elite Task 2</span>
+          <div class="rule-status"></div>
+        </div>
+        <div class="rule-quest-content">
+          <span class="rule-summary-badge">Stay Quiet</span>
+          <h4>The Tranquility Quest</h4>
+          <p>Respect the silence of the estate. Every moment here is a symphony of peace.</p>
+          <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+        </div>
+        <span class="rule-icon-floating">🤫</span>
       </div>
-      <div class="rule-card">
-        <span class="rule-icon">Sec</span>
-        <div><h4>Security Protocols</h4><p>Strict access control for visitors to ensure the safety of all residents.</p></div>
+
+      <!-- Security Quest -->
+      <div class="rule-quest-card">
+        <div class="rule-quest-header">
+          <span class="rule-badge">Elite Task 3</span>
+          <div class="rule-status"></div>
+        </div>
+        <div class="rule-quest-content">
+          <span class="rule-summary-badge">Stay Secure</span>
+          <h4>The Guardian Protocol</h4>
+          <p>Security is our signature. Help us keep the realm safe with strict guest access protocols.</p>
+          <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+        </div>
+        <span class="rule-icon-floating">🛡️</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BOOKING INQUIRY FORM -->
-<section style="padding: 60px 0 100px; background: rgba(255,255,255,0.3);">
-  <div class="container">
     <div class="section-header reveal">
-      <span class="section-tag">Take the Next Step</span>
-      <h2 class="section-title">Request a Private Tour</h2>
+      <span class="section-tag">Get In Touch</span>
+      <h2 class="section-title">Send a Booking Inquiry</h2>
     </div>
     <div class="booking-form-card reveal">
-      <h3>Exclusive Inquiry</h3>
-      <p class="form-subtitle">Serious inquiries only. Please provide your details for a confidential discussion.</p>
+      <h3>Reserve the Estate</h3>
+      <p class="form-subtitle">Fill in your details and we'll confirm availability within the hour via WhatsApp.</p>
       <form id="bookingForm" onsubmit="submitBookingInquiry(event)">
         <div class="form-row">
           <div class="form-group">
@@ -224,25 +281,27 @@
             <input type="text" id="guestName" placeholder="Your full name" required>
           </div>
           <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" id="guestEmail" placeholder="email@example.com" required>
+            <label>Phone / WhatsApp</label>
+            <input type="tel" id="guestPhone" placeholder="+254 700 000000" required>
           </div>
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Phone / WhatsApp</label>
-            <input type="tel" id="guestPhone" placeholder="+254 700 000000" required>
+            <label>Unit Preference</label>
+            <select id="guestUnit">
+              <option>The Vineyard Estate</option>
+            </select>
           </div>
           <div class="form-group">
-            <label>Preferred Date</label>
-            <input type="date" id="tourDate" required>
+            <label>Number of Nights</label>
+            <input type="number" id="guestNights" placeholder="e.g. 3" min="1" required>
           </div>
         </div>
         <div class="form-group">
           <label>Inquiry Details</label>
           <textarea id="guestMessage" rows="3" placeholder="Tell us more about your interest…"></textarea>
         </div>
-        <button type="submit" class="booking-submit">Request Confidential Callback →</button>
+        <button type="submit" class="booking-submit">Send Inquiry via WhatsApp →</button>
       </form>
     </div>
   </div>

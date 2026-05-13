@@ -78,7 +78,7 @@ function calcPrice() {
 
   const rate         = parseInt(unitSelect.value, 10);
   const nights       = Math.max(1, parseInt(nightsInput.value, 10) || 1);
-  const cleaningFee  = 1500;
+  const cleaningFee  = 0;
   const total        = rate * nights + cleaningFee;
 
   const unitName = unitSelect.options[unitSelect.selectedIndex].text.split('\u2014')[0].trim();

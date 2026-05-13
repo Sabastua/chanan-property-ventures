@@ -1,402 +1,679 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Honeycomb Suites | Chanan Property Ventures</title>
-  <meta name="description" content="Honeycomb Suites — Premium Airbnb short-stay units 102 & 103 by Chanan Property Ventures. Book your luxurious getaway today.">
+  <meta name="description"
+    content="Honeycomb Suites — Premium Airbnb short-stay units 102 & 103 by Chanan Property Ventures. Book your luxurious getaway today.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="images/LOGO.jpeg">
   <style>
-    .page-hero{width:100%;aspect-ratio:16/9;min-height:50vh;max-height:800px;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:140px}
-    .slider-bg{position:absolute;inset:0;z-index:0}
-    .slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;animation:slideFade 30s infinite linear}
-    .slide:nth-child(1){animation-delay:0s}
-    .slide:nth-child(2){animation-delay:6s}
-    .slide:nth-child(3){animation-delay:12s}
-    .slide:nth-child(4){animation-delay:18s}
-    .slide:nth-child(5){animation-delay:24s}
-    @keyframes slideFade{
-      0%{opacity:0;transform:scale(1)}
-      3%{opacity:1;transform:scale(1.01)}
-      20%{opacity:1;transform:scale(1.05)}
-      23%{opacity:0;transform:scale(1.06)}
-      100%{opacity:0;transform:scale(1.06)}
+    .page-hero {
+      width: 100%;
+      aspect-ratio: 16/9;
+      min-height: 50vh;
+      max-height: 800px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 140px
     }
-    .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(250,250,250,0.85),rgba(247,247,248,0.7));z-index:1}
-    .page-hero .container{position:relative;z-index:2}
-    .page-hero h1{font-size:clamp(32px,4vw,56px);margin-bottom:12px}
-    .page-hero h1 .accent{color:var(--orange)}
-    .page-hero p{font-size:17px;color:var(--grey-400);max-width:600px;line-height:1.8}
-    .brand-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;background:rgba(232,114,42,0.1);border:1px solid rgba(232,114,42,0.2);border-radius:50px;font-size:13px;font-weight:600;color:var(--orange);margin-bottom:20px}
-    .unit-section{padding:80px 0}
-    .unit-layout{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:start;margin-bottom:80px}
-    .unit-layout.reverse{direction:rtl}.unit-layout.reverse>*{direction:ltr}
-    .unit-gallery{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-    .unit-gallery img{width:100%;height:400px;object-fit:cover;transition:var(--transition)}
-    .unit-gallery:hover img{transform:scale(1.03)}
-    .unit-details h3{font-size:28px;margin-bottom:8px}
-    .unit-details .subtitle{color:var(--orange);font-size:13px;text-transform:uppercase;letter-spacing:2px;margin-bottom:20px}
-    .unit-details p{color:var(--grey-400);line-height:1.8;margin-bottom:20px}
-    .amenities-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:24px}
-    .amenity{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 14px;
-      background: rgba(255,255,255,0.72);
+
+    .slider-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      animation: slideFade 30s infinite linear
+    }
+
+    .slide:nth-child(1) {
+      animation-delay: 0s
+    }
+
+    .slide:nth-child(2) {
+      animation-delay: 6s
+    }
+
+    .slide:nth-child(3) {
+      animation-delay: 12s
+    }
+
+    .slide:nth-child(4) {
+      animation-delay: 18s
+    }
+
+    .slide:nth-child(5) {
+      animation-delay: 24s
+    }
+
+    @keyframes slideFade {
+      0% {
+        opacity: 0;
+        transform: scale(1)
+      }
+
+      3% {
+        opacity: 1;
+        transform: scale(1.01)
+      }
+
+      20% {
+        opacity: 1;
+        transform: scale(1.05)
+      }
+
+      23% {
+        opacity: 0;
+        transform: scale(1.06)
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1.06)
+      }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(250, 250, 250, 0.85), rgba(247, 247, 248, 0.7));
+      z-index: 1
+    }
+
+    .page-hero .container {
+      position: relative;
+      z-index: 2
+    }
+
+    .page-hero h1 {
+      font-size: clamp(32px, 4vw, 56px);
+      margin-bottom: 12px
+    }
+
+    .page-hero h1 .accent {
+      color: var(--orange)
+    }
+
+    .page-hero p {
+      font-size: 17px;
+      color: var(--grey-400);
+      max-width: 600px;
+      line-height: 1.8
+    }
+
+    .brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      background: rgba(232, 114, 42, 0.1);
+      border: 1px solid rgba(232, 114, 42, 0.2);
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 20px
+    }
+
+    .unit-section {
+      padding: 80px 0
+    }
+
+    .unit-layout {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 48px;
+      align-items: start;
+      margin-bottom: 80px
+    }
+
+    .unit-layout.reverse {
+      direction: rtl
+    }
+
+    .unit-layout.reverse>* {
+      direction: ltr
+    }
+
+    .unit-gallery {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow)
+    }
+
+    .unit-gallery img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      transition: var(--transition)
+    }
+
+    .unit-gallery:hover img {
+      transform: scale(1.03)
+    }
+
+    .unit-details h3 {
+      font-size: 28px;
+      margin-bottom: 8px
+    }
+
+    .unit-details .subtitle {
+      color: var(--orange);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px
+    }
+
+    .unit-details p {
+      color: var(--grey-400);
+      line-height: 1.8;
+      margin-bottom: 20px
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px
+    }
+
+    .amenity {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: rgba(255, 255, 255, 0.72);
       backdrop-filter: blur(14px) saturate(160%);
       -webkit-backdrop-filter: blur(14px) saturate(160%);
-      border: 1px solid rgba(255,255,255,0.80);
+      border: 1px solid rgba(255, 255, 255, 0.80);
       border-radius: 14px;
       font-size: 13px;
       font-weight: 700;
       color: var(--grey-800);
-      box-shadow: 0 10px 24px rgba(15,23,42,0.06), inset 0 1px 0 rgba(255,255,255,0.9);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
       transition: var(--transition);
     }
-    .amenity:hover{
+
+    .amenity:hover {
       transform: translateY(-2px);
-      border-color: rgba(232,114,42,0.22);
-      box-shadow: 0 18px 34px rgba(15,23,42,0.10), 0 10px 26px rgba(232,114,42,0.08), inset 0 1px 0 rgba(255,255,255,0.92);
+      border-color: rgba(232, 114, 42, 0.22);
+      box-shadow: 0 18px 34px rgba(15, 23, 42, 0.10), 0 10px 26px rgba(232, 114, 42, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.92);
     }
-    .unit-price{font-size:28px;font-weight:800;color:var(--orange);font-family:'Inter',sans-serif;margin-bottom:20px}
-    .unit-price small{font-size:14px;color:var(--grey-400);font-weight:400}
-    .gallery-thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}
-    .gallery-thumbs img{height:100px;border-radius:var(--radius-sm);cursor:pointer;transition:var(--transition);border:2px solid transparent}
-    .gallery-thumbs img:hover{border-color:var(--orange)}
-    @media(max-width:768px){.unit-layout,.unit-layout.reverse{grid-template-columns:1fr;direction:ltr}}
+
+    .unit-price {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--orange);
+      font-family: 'Inter', sans-serif;
+      margin-bottom: 20px
+    }
+
+    .unit-price small {
+      font-size: 14px;
+      color: var(--grey-400);
+      font-weight: 400
+    }
+
+    .gallery-thumbs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      margin-top: 8px
+    }
+
+    .gallery-thumbs img {
+      height: 100px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+      border: 2px solid transparent
+    }
+
+    .gallery-thumbs img:hover {
+      border-color: var(--orange)
+    }
+
+    @media(max-width:768px) {
+
+      .unit-layout,
+      .unit-layout.reverse {
+        grid-template-columns: 1fr;
+        direction: ltr
+      }
+    }
   </style>
 </head>
+
 <body id="top">
 
-<div class="liquid-bg">
-  <div class="blob blob-1"></div>
-  <div class="blob blob-2"></div>
-  <div class="blob blob-3"></div>
-</div>
-
-<nav class="navbar" id="navbar">
-  <div class="container">
-    <a href="index.html" class="nav-logo">
-      <img src="images/LOGO.jpeg" alt="Chanan Logo" class="nav-logo-img">
-      <div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span class="nav-logo-sub">Reliable Property Management</span></div>
-    </a>
-    <ul class="nav-links">
-      <li><a href="honeycomb.html" style="color:var(--orange)">Honeycomb Suites</a></li>
-      <li><a href="bedrock.html">Bedrock Suites</a></li>
-      <li><a href="vineyard.html">Vineyard Luxury</a></li>
-    </ul>
-    <a href="contact.html" class="nav-cta">Get In Touch</a>
-    <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="liquid-bg">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
   </div>
-</nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <button class="mobile-close" id="mobileClose" aria-label="Close">X</button>
-  <a href="honeycomb.html">Honeycomb Suites</a>
-  <a href="bedrock.html">Bedrock Suites</a>
-  <a href="vineyard.html">Vineyard Luxury</a>
-  <a href="contact.html">Contact</a>
-</div>
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="images/LOGO.jpeg" alt="Chanan Logo" class="nav-logo-img">
+        <div class="nav-logo-text"><span class="nav-logo-title">Chanan Property Ventures</span><span
+            class="nav-logo-sub">Reliable Property Management</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="honeycomb.html" style="color:var(--orange)">Honeycomb Suites</a></li>
+        <li><a href="bedrock.html">Bedrock Suites</a></li>
+        <li><a href="vineyard.html">Vineyard Luxury</a></li>
+      </ul>
+      <a href="contact.html" class="nav-cta">Get In Touch</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
 
-<section class="page-hero reveal">
-  <div class="slider-bg">
-    <div class="slide" style="background-image: url('images/USE%20THIS%20.jpg')"></div>
-    <div class="slide" style="background-image: url('images/DSC_0143.jpg')"></div>
-    <div class="slide" style="background-image: url('images/DSC_0060.jpg')"></div>
-    <div class="slide" style="background-image: url('images/DSC_0062.jpg')"></div>
-    <div class="slide" style="background-image: url('images/DSC_0080.jpg')"></div>
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" id="mobileClose" aria-label="Close">X</button>
+    <a href="honeycomb.html">Honeycomb Suites</a>
+    <a href="bedrock.html">Bedrock Suites</a>
+    <a href="vineyard.html">Vineyard Luxury</a>
+    <a href="contact.html">Contact</a>
   </div>
-  <div class="hero-overlay"></div>
-  <div class="container">
-    <div class="brand-badge">Airbnb Collection</div>
-    <h1>Honeycomb <span class="accent">Suites</span></h1>
-    <p>Experience luxury short-stays in our meticulously designed units. Perfect for travelers who seek comfort, style, and a touch of home.</p>
-  </div>
-</section>
 
-<section class="unit-section">
-  <div class="container">
-    <!-- Unit 102 -->
-    <div class="unit-layout reveal">
-      <div class="unit-gallery">
-        <img src="images/DSC_0059.jpg" alt="Honeycomb Suite 102" id="main102">
-        <div class="gallery-thumbs">
-          <img src="images/DSC_0059.jpg" alt="Suite 102 Bedroom" onclick="document.getElementById('main102').src=this.src">
-          <img src="images/DSC_0060.jpg" alt="Suite 102 Detail" onclick="document.getElementById('main102').src=this.src">
-          <img src="images/DSC_0062.jpg" alt="Suite 102 Kitchen" onclick="document.getElementById('main102').src=this.src">
-        </div>
-      </div>
-      <div class="unit-details">
-        <div class="subtitle">Unit 102</div>
-        <h3>The Signature Suite</h3>
-        <p>A beautifully appointed one-bedroom suite featuring a king-sized bed, a modern kitchenette, and a cozy lounge area. Designed with a warm honeycomb palette and premium finishes.</p>
-        <div class="amenities-grid">
-          <div class="amenity">King Bed</div>
-          <div class="amenity">Modern Bath</div>
-          <div class="amenity">Kitchenette</div>
-          <div class="amenity">High-speed WiFi</div>
-          <div class="amenity">Smart TV</div>
-          <div class="amenity">Air Conditioning</div>
-          <div class="amenity">Luxury Linens</div>
-          <div class="amenity">Coffee Station</div>
-        </div>
-        <div class="unit-price">KES 8,500 <small>/night</small></div>
-        <a href="https://airbnb.com" class="btn-primary">Book Now</a>
-      </div>
+  <section class="page-hero reveal">
+    <div class="slider-bg">
+      <div class="slide" style="background-image: url('images/USE%20THIS%20.jpg')"></div>
+      <div class="slide" style="background-image: url('images/DSC_0143.jpg')"></div>
+      <div class="slide" style="background-image: url('images/DSC_0060.jpg')"></div>
+      <div class="slide" style="background-image: url('images/DSC_0062.jpg')"></div>
+      <div class="slide" style="background-image: url('images/DSC_0080.jpg')"></div>
     </div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="brand-badge">Airbnb Collection</div>
+      <h1>Honeycomb <span class="accent">Suites</span></h1>
+      <p>Experience luxury short-stays in our meticulously designed units. Perfect for travelers who seek comfort,
+        style, and a touch of home.</p>
+    </div>
+  </section>
 
-    <!-- Unit 103 -->
-    <div class="unit-layout reverse reveal">
-      <div class="unit-gallery">
-        <img src="images/DSC_0080.jpg" alt="Honeycomb Suite 103" id="main103">
-        <div class="gallery-thumbs">
-          <img src="images/DSC_0080.jpg" alt="Suite 103 Main" onclick="document.getElementById('main103').src=this.src">
-          <img src="images/DSC_0082.jpg" alt="Suite 103 Kitchen Detail" onclick="document.getElementById('main103').src=this.src">
-          <img src="images/DSC_0083.jpg" alt="Suite 103 Stove" onclick="document.getElementById('main103').src=this.src">
-        </div>
-      </div>
-      <div class="unit-details">
-        <div class="subtitle">Unit 103</div>
-        <h3>The Urban Retreat</h3>
-        <p>Offering a slightly larger floor plan, Unit 103 provides a serene escape from the city hustle. Enjoy a full gourmet kitchen and a spacious balcony with panoramic views.</p>
-        <div class="amenities-grid">
-          <div class="amenity">King Bed</div>
-          <div class="amenity">Rain Shower</div>
-          <div class="amenity">Full Kitchen</div>
-          <div class="amenity">Fiber WiFi</div>
-          <div class="amenity">Private Balcony</div>
-          <div class="amenity">Netflix/Prime</div>
-          <div class="amenity">Washer/Dryer</div>
-          <div class="amenity">Secure Parking</div>
-        </div>
-        <div class="unit-price">KES 9,500 <small>/night</small></div>
-        <a href="https://airbnb.com" class="btn-primary">Book Now</a>
-      </div>
-    </div>
-
-    <div class="reveal" style="text-align:center; margin-top: 18px;">
-      <a href="honeycomb-gallery.html" class="btn-outline">See more photos →</a>
-    </div>
-  </div>
-</section>
-
-<!-- PRICE CALCULATOR + QUICK INFO -->
-<section style="padding: 80px 0;">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Plan Your Stay</span>
-      <h2 class="section-title">Stay Planner</h2>
-    </div>
-    <div class="tools-grid reveal">
-      <!-- Price Calculator -->
-      <div class="tool-card">
-        <h3>Price Estimator</h3>
-        <p class="tool-subtitle">Get an instant cost estimate for your stay.</p>
-        <div class="calc-inputs">
-          <div class="calc-input-group">
-            <label>Select Unit</label>
-            <select id="unitSelect" onchange="calcPrice()">
-              <option value="8500">Unit 102 — KES 8,500/night</option>
-              <option value="9500">Unit 103 — KES 9,500/night</option>
-            </select>
-          </div>
-          <div class="calc-input-group">
-            <label>Number of Nights</label>
-            <input type="number" id="nightsInput" value="2" min="1" max="30" oninput="calcPrice()">
-          </div>
-          <div class="calc-input-group">
-            <label>Number of Guests</label>
-            <input type="number" id="guestsInput" value="1" min="1" max="4" oninput="calcPrice()">
+  <section class="unit-section">
+    <div class="container">
+      <!-- Unit 102 -->
+      <div class="unit-layout reveal">
+        <div class="unit-gallery">
+          <img src="images/DSC_0059.jpg" alt="Honeycomb Suite 102" id="main102">
+          <div class="gallery-thumbs">
+            <img src="images/DSC_0059.jpg" alt="Suite 102 Bedroom"
+              onclick="document.getElementById('main102').src=this.src">
+            <img src="images/DSC_0060.jpg" alt="Suite 102 Detail"
+              onclick="document.getElementById('main102').src=this.src">
+            <img src="images/DSC_0062.jpg" alt="Suite 102 Kitchen"
+              onclick="document.getElementById('main102').src=this.src">
           </div>
         </div>
-        <div class="price-row"><span>Nightly Rate</span><strong id="calcNightly">KES 8,500</strong></div>
-        <div class="price-row"><span>Nights</span><strong id="calcNights">2</strong></div>
-        <div class="price-row"><span>Cleaning Fee</span><strong>KES 1,500</strong></div>
-        <div class="price-total">
-          <div class="total-label">Estimated Total</div>
-          <div class="total-amount" id="calcTotal">KES 18,500</div>
+        <div class="unit-details">
+          <div class="subtitle">Unit 102</div>
+          <h3>The Signature Suite</h3>
+          <p>A beautifully appointed one-bedroom suite featuring a king-sized bed, a modern kitchenette, and a cozy
+            lounge area. Designed with a warm honeycomb palette and premium finishes.</p>
+          <div class="amenities-grid">
+            <div class="amenity">King Bed</div>
+            <div class="amenity">Modern Bath</div>
+            <div class="amenity">Kitchenette</div>
+            <div class="amenity">High-speed WiFi</div>
+            <div class="amenity">Smart TV</div>
+            <div class="amenity">Air Conditioning</div>
+            <div class="amenity">Luxury Linens</div>
+            <div class="amenity">Coffee Station</div>
+          </div>
+          <div class="unit-price-container">
+            <span class="unit-price-old">KES 4,500</span>
+            <div class="unit-price-current">KES 4,000 <small>/night</small></div>
+          </div>
+          <a href="https://airbnb.com" class="btn-primary">Book Now</a>
         </div>
-        <a id="waCalcLink" href="https://wa.me/254708085734?text=Hello!%20I%27d%20like%20to%20book%20Unit%20102%20for%202%20nights." class="wa-book-btn" target="_blank">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-          Book via WhatsApp
-        </a>
       </div>
 
-      <!-- Quick Info Card -->
-      <div class="tool-card">
-        <h3>Good to Know</h3>
-        <p class="tool-subtitle">Everything you need before you arrive.</p>
-        <div class="price-row"><span>Check-in</span><strong>From 2:00 PM</strong></div>
-        <div class="price-row"><span>Check-out</span><strong>By 11:00 AM</strong></div>
-        <div class="price-row"><span>Access</span><strong>Self Check-in</strong></div>
-        <div class="price-row"><span>Max Guests</span><strong>4 per unit</strong></div>
-        <div class="price-row"><span>Pets</span><strong>Not Allowed</strong></div>
-        <div class="price-row"><span>Smoking</span><strong>Not Allowed</strong></div>
-        <div class="price-row"><span>Events</span><strong>Not Allowed</strong></div>
-        <div class="price-row"><span>Parking</span><strong>Free & Secure</strong></div>
+      <!-- Unit 103 -->
+      <div class="unit-layout reverse reveal">
+        <div class="unit-gallery">
+          <img src="images/DSC_0080.jpg" alt="Honeycomb Suite 103" id="main103">
+          <div class="gallery-thumbs">
+            <img src="images/DSC_0080.jpg" alt="Suite 103 Main"
+              onclick="document.getElementById('main103').src=this.src">
+            <img src="images/DSC_0082.jpg" alt="Suite 103 Kitchen Detail"
+              onclick="document.getElementById('main103').src=this.src">
+            <img src="images/DSC_0083.jpg" alt="Suite 103 Stove"
+              onclick="document.getElementById('main103').src=this.src">
+          </div>
+        </div>
+        <div class="unit-details">
+          <div class="subtitle">Unit 103</div>
+          <h3>The Urban Retreat</h3>
+          <p>Offering a slightly larger floor plan, Unit 103 provides a serene escape from the city hustle. Enjoy a full
+            gourmet kitchen and a spacious balcony with panoramic views.</p>
+          <div class="amenities-grid">
+            <div class="amenity">King Bed</div>
+            <div class="amenity">Rain Shower</div>
+            <div class="amenity">Full Kitchen</div>
+            <div class="amenity">Fiber WiFi</div>
+            <div class="amenity">Private Balcony</div>
+            <div class="amenity">Netflix/Prime</div>
+            <div class="amenity">Washer/Dryer</div>
+            <div class="amenity">Secure Parking</div>
+          </div>
+          <div class="unit-price-container">
+            <span class="unit-price-old">KES 4,500</span>
+            <div class="unit-price-current">KES 4,000 <small>/night</small></div>
+          </div>
+          <a href="https://airbnb.com" class="btn-primary">Book Now</a>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
 
-<!-- HOUSE RULES -->
-<section style="padding: 60px 0; background: rgba(255,255,255,0.3);">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Before You Book</span>
-      <h2 class="section-title">House Rules</h2>
-    </div>
-    <div class="rules-grid reveal">
-      <div class="rule-card">
-        <span class="rule-icon">Time</span>
-        <div><h4>Check-in / Check-out</h4><p>Check-in from 2:00 PM. Check-out by 11:00 AM. Late check-out by prior arrangement only.</p></div>
-      </div>
-      <div class="rule-card">
-        <span class="rule-icon">Quiet</span>
-        <div><h4>Quiet Hours</h4><p>Please respect quiet hours between 10:00 PM and 8:00 AM to ensure comfort for all residents.</p></div>
-      </div>
-      <div class="rule-card">
-        <span class="rule-icon">No</span>
-        <div><h4>No Smoking</h4><p>Strictly no smoking inside the unit. A designated smoking area is available outside the building.</p></div>
-      </div>
-      <div class="rule-card">
-        <span class="rule-icon">No</span>
-        <div><h4>No Pets</h4><p>We regret that pets are not permitted in the suites at this time.</p></div>
-      </div>
-      <div class="rule-card">
-        <span class="rule-icon">No</span>
-        <div><h4>No Parties or Events</h4><p>The suites are designed for peaceful stays. Parties and large gatherings are not permitted.</p></div>
-      </div>
-      <div class="rule-card">
-        <span class="rule-icon">Care</span>
-        <div><h4>Leave it Tidy</h4><p>Please leave the unit in the same condition as you found it. A cleaning fee of KES 1,500 applies.</p></div>
+      <div class="reveal" style="text-align:center; margin-top: 18px;">
+        <a href="honeycomb-gallery.html" class="btn-outline">See more photos →</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- NEARBY ATTRACTIONS -->
-<section style="padding: 80px 0;">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Explore the Area</span>
-      <h2 class="section-title">What's Nearby</h2>
-    </div>
-    <div class="nearby-grid reveal">
-      <div class="nearby-card">
-        <div class="nearby-icon">Shop</div>
-        <h4>Supermarket</h4>
-        <p>Naivas / Quickmart</p>
-        <span class="distance">~5 min walk</span>
+  <!-- PRICE CALCULATOR + QUICK INFO -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Plan Your Stay</span>
+        <h2 class="section-title">Stay Planner</h2>
       </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">Food</div>
-        <h4>Restaurants</h4>
-        <p>Variety of local & international cuisine</p>
-        <span class="distance">~10 min walk</span>
-      </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">Bus</div>
-        <h4>Public Transport</h4>
-        <p>Matatu & taxi stage</p>
-        <span class="distance">~3 min walk</span>
-      </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">Pharm</div>
-        <h4>Pharmacy</h4>
-        <p>24hr Chemist nearby</p>
-        <span class="distance">~7 min walk</span>
-      </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">Cafe</div>
-        <h4>Coffee Shops</h4>
-        <p>Java, Artcaffe & local cafes</p>
-        <span class="distance">~10 min walk</span>
-      </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">Gym</div>
-        <h4>Gym</h4>
-        <p>Fitness centre</p>
-        <span class="distance">~12 min walk</span>
-      </div>
-      <div class="nearby-card">
-        <div class="nearby-icon">ATM</div>
-        <h4>ATM / Bank</h4>
-        <p>Multiple ATMs nearby</p>
-        <span class="distance">~5 min walk</span>
-      </div>
-    </div>
-  </div>
-</section>
+      <div class="tools-grid reveal">
+        <!-- Price Calculator -->
+        <div class="tool-card">
+          <h3>Price Estimator</h3>
+          <p class="tool-subtitle">Get an instant cost estimate for your stay.</p>
+          <div class="calc-inputs">
+            <div class="calc-input-group">
+              <label>Select Unit</label>
+              <select id="unitSelect" onchange="calcPrice()">
+                <option value="4000">Unit 102 — KES 4,000/night</option>
+                <option value="5500">Unit 103 — KES 5,500/night</option>
+              </select>
+            </div>
+            <div class="calc-input-group">
+              <label>Number of Nights</label>
+              <input type="number" id="nightsInput" value="2" min="1" max="30" oninput="calcPrice()">
+            </div>
+          </div>
+          <div class="price-row"><span>Nightly Rate</span><strong id="calcNightly">KES 4,000</strong></div>
+          <div class="price-row"><span>Nights</span><strong id="calcNights">2</strong></div>
+          <div class="price-total">
+            <div class="total-label">Estimated Total</div>
+            <div class="total-amount" id="calcTotal">KES 8,000</div>
+          </div>
+          <a id="waCalcLink"
+            href="https://wa.me/254708085734?text=Hello!%20I%27d%20like%20to%20book%20Unit%20102%20for%202%20nights."
+            class="wa-book-btn" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+            </svg>
+            Book via WhatsApp
+          </a>
+        </div>
 
-<!-- BOOKING INQUIRY FORM -->
-<section style="padding: 60px 0 100px; background: rgba(255,255,255,0.3);">
-  <div class="container">
-    <div class="section-header reveal">
-      <span class="section-tag">Get In Touch</span>
-      <h2 class="section-title">Send a Booking Inquiry</h2>
+        <!-- Quick Info Card -->
+        <div class="tool-card">
+          <h3>Good to Know</h3>
+          <p class="tool-subtitle">Everything you need before you arrive.</p>
+          <div class="price-row"><span>Check-in</span><strong>From 2:00 PM</strong></div>
+          <div class="price-row"><span>Check-out</span><strong>By 11:00 AM</strong></div>
+          <div class="price-row"><span>Access</span><strong>Self Check-in</strong></div>
+          <div class="price-row"><span>Max Guests</span><strong>4 per unit</strong></div>
+          <div class="price-row"><span>Pets</span><strong>Not Allowed</strong></div>
+          <div class="price-row"><span>Smoking</span><strong>Not Allowed</strong></div>
+          <div class="price-row"><span>Events</span><strong>Not Allowed</strong></div>
+          <div class="price-row"><span>Parking</span><strong>Free & Secure</strong></div>
+        </div>
+      </div>
     </div>
-    <div class="booking-form-card reveal">
-      <h3>Reserve Your Suite</h3>
-      <p class="form-subtitle">Fill in your details and we'll confirm availability within the hour via WhatsApp.</p>
-      <form id="bookingForm" onsubmit="submitBookingInquiry(event)">
-        <div class="form-row">
+  </section>
+
+  <!-- HOUSE RULES -->
+  <section style="padding: 60px 0; background: rgba(255,255,255,0.3);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Guest Quest</span>
+        <h2 class="section-title">The Chanan Rules</h2>
+        <p style="font-size: 13px; color: var(--orange); margin-top: 10px; font-weight: 600;">← Swipe to reveal your missions →</p>
+      </div>
+      
+      <div class="rules-container-gamified reveal">
+        <!-- Arrival Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 1</span>
+            <div class="rule-status"></div>
+          </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">Timely Check-in</span>
+            <h4>The Arrival Quest</h4>
+            <p>Unlock your stay between 2:00 PM and 11:00 AM. Early access requires a secret arrangement!</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">🔑</span>
+        </div>
+
+        <!-- Zen Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 2</span>
+            <div class="rule-status"></div>
+          </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">Quiet Nights</span>
+            <h4>The Zen Master</h4>
+            <p>Maintain peak tranquility between 10:00 PM and 8:00 AM. Your neighbors will thank you!</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">🧘</span>
+        </div>
+
+        <!-- Fresh Air Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 3</span>
+            <div class="rule-status"></div>
+          </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">Outdoor Smoking</span>
+            <h4>The Fresh Air Legend</h4>
+            <p>Keep the indoor air pristine. The balcony is your designated high-altitude smoking zone.</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">☁️</span>
+        </div>
+
+        <!-- Fur-Free Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 4</span>
+            <div class="rule-status"></div>
+          </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">No Pets</span>
+            <h4>The Fur-Free Realm</h4>
+            <p>A sanctuary for humans only! We love pets, but they're taking a vacation elsewhere this time.</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">🐾</span>
+        </div>
+
+        <!-- Party Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 5</span>
+            <div class="rule-status"></div>
+          </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">No Parties</span>
+            <h4>The Peace Protocol</h4>
+            <p>Quiet vibes only. Parties belong in the city; memories belong in our suites.</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">🥂</span>
+        </div>
+
+        <!-- Tidy Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 6</span>
+            <div class="rule-status"></div>
+          </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">Stay Clean</span>
+            <h4>The Clean Sweep</h4>
+            <p>Leave the suite as glowing as you found it. Legendary guests leave zero traces!</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">✨</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEARBY ATTRACTIONS -->
+  <section style="padding: 80px 0;">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Explore the Area</span>
+        <h2 class="section-title">What's Nearby</h2>
+      </div>
+      <div class="nearby-grid reveal">
+        <div class="nearby-card">
+          <div class="nearby-icon">Shop</div>
+          <h4>Supermarket</h4>
+          <p>Naivas / Quickmart</p>
+          <span class="distance">~5 min walk</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">Food</div>
+          <h4>Restaurants</h4>
+          <p>Variety of local & international cuisine</p>
+          <span class="distance">~10 min walk</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">Bus</div>
+          <h4>Public Transport</h4>
+          <p>Matatu & taxi stage</p>
+          <span class="distance">~3 min walk</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">Pharm</div>
+          <h4>Pharmacy</h4>
+          <p>24hr Chemist nearby</p>
+          <span class="distance">~7 min walk</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">Cafe</div>
+          <h4>Coffee Shops</h4>
+          <p>Java, Artcaffe & local cafes</p>
+          <span class="distance">~10 min walk</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">Gym</div>
+          <h4>Gym</h4>
+          <p>Fitness centre</p>
+          <span class="distance">~12 min walk</span>
+        </div>
+        <div class="nearby-card">
+          <div class="nearby-icon">ATM</div>
+          <h4>ATM / Bank</h4>
+          <p>Multiple ATMs nearby</p>
+          <span class="distance">~5 min walk</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING INQUIRY FORM -->
+  <section style="padding: 60px 0 100px; background: rgba(255,255,255,0.3);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Send a Booking Inquiry</h2>
+      </div>
+      <div class="booking-form-card reveal">
+        <h3>Reserve Your Suite</h3>
+        <p class="form-subtitle">Fill in your details and we'll confirm availability within the hour via WhatsApp.</p>
+        <form id="bookingForm" onsubmit="submitBookingInquiry(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" id="guestName" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" id="guestPhone" placeholder="+254 700 000000" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Unit Preference</label>
+              <select id="guestUnit">
+                <option>Unit 102 — The Signature Suite</option>
+                <option>Unit 103 — The Urban Retreat</option>
+                <option>Either unit is fine</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Number of Nights</label>
+              <input type="number" id="guestNights" placeholder="e.g. 3" min="1" required>
+            </div>
+          </div>
           <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" id="guestName" placeholder="Your full name" required>
+            <label>Special Requests (optional)</label>
+            <textarea id="guestMessage" rows="3"
+              placeholder="Early check-in, dietary needs, or anything else…"></textarea>
           </div>
-          <div class="form-group">
-            <label>Phone / WhatsApp</label>
-            <input type="tel" id="guestPhone" placeholder="+254 700 000000" required>
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Unit Preference</label>
-            <select id="guestUnit">
-              <option>Unit 102 — The Signature Suite</option>
-              <option>Unit 103 — The Urban Retreat</option>
-              <option>Either unit is fine</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Number of Nights</label>
-            <input type="number" id="guestNights" placeholder="e.g. 3" min="1" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Special Requests (optional)</label>
-          <textarea id="guestMessage" rows="3" placeholder="Early check-in, dietary needs, or anything else…"></textarea>
-        </div>
-        <button type="submit" class="booking-submit">Send Inquiry via WhatsApp →</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-bottom">
-      <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
-      <div class="footer-socials">
-        <a href="#">Instagram</a>
-        <a href="#">Twitter</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">WhatsApp</a>
+          <button type="submit" class="booking-submit">Send Inquiry via WhatsApp →</button>
+        </form>
       </div>
     </div>
-  </div>
-</footer>
+  </section>
 
-<!-- WHATSAPP FLOATING BUTTON -->
-<a href="https://wa.me/254708085734?text=Hello!%20I%27m%20interested%20in%20booking%20a%20Honeycomb%20Suite." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <span class="wa-pulse"></span>
-  <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-  Book Now
-</a>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 Chanan Property Ventures. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-<script src="script.js"></script>
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/254708085734?text=Hello!%20I%27m%20interested%20in%20booking%20a%20Honeycomb%20Suite."
+    class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <span class="wa-pulse"></span>
+    <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+    </svg>
+    Book Now
+  </a>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

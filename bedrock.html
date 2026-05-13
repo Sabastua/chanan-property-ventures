@@ -374,7 +374,10 @@
             <div class="amenity">Ample Storage</div>
             <div class="amenity">Large Windows</div>
           </div>
-          <div class="unit-price">KES 10,000 <small>/night</small></div>
+          <div class="unit-price-container">
+            <span class="unit-price-old">KES 5,000</span>
+            <div class="unit-price-current">KES 4,500 <small>/night</small></div>
+          </div>
           <a href="https://airbnb.com" class="btn-primary">Book Now</a>
         </div>
       </div>
@@ -407,7 +410,10 @@
             <div class="amenity">Modern Tiles</div>
             <div class="amenity">Tiled Floors</div>
           </div>
-          <div class="unit-price">KES 9,000 <small>/night</small></div>
+          <div class="unit-price-container">
+            <span class="unit-price-old">KES 5,000</span>
+            <div class="unit-price-current">KES 4,500 <small>/night</small></div>
+          </div>
           <a href="https://airbnb.com" class="btn-primary">Book Now</a>
         </div>
       </div>
@@ -434,8 +440,8 @@
             <div class="calc-input-group">
               <label>Select Unit</label>
               <select id="unitSelect" onchange="calcPrice()">
-                <option value="10000">Unit 80 — KES 10,000/night</option>
-                <option value="9000">Unit 81 — KES 9,000/night</option>
+                <option value="4500">Unit 80 — KES 4,500/night</option>
+                <option value="4500">Unit 81 — KES 4,500/night</option>
               </select>
             </div>
             <div class="calc-input-group">
@@ -443,12 +449,11 @@
               <input type="number" id="nightsInput" value="2" min="1" max="30" oninput="calcPrice()">
             </div>
           </div>
-          <div class="price-row"><span>Nightly Rate</span><strong id="calcNightly">KES 10,000</strong></div>
+          <div class="price-row"><span>Nightly Rate</span><strong id="calcNightly">KES 4,500</strong></div>
           <div class="price-row"><span>Nights</span><strong id="calcNights">2</strong></div>
-          <div class="price-row"><span>Cleaning Fee</span><strong>KES 1,500</strong></div>
           <div class="price-total">
             <div class="total-label">Estimated Total</div>
-            <div class="total-amount" id="calcTotal">KES 21,500</div>
+            <div class="total-amount" id="calcTotal">KES 9,000</div>
           </div>
           <a id="waCalcLink"
             href="https://wa.me/254708085734?text=Hello!%20I%27d%20like%20to%20book%20Unit%2080%20at%20Bedrock%20Suites."
@@ -480,53 +485,101 @@
 
   <!-- HOUSE RULES -->
   <section style="padding: 60px 0; background: rgba(226, 232, 240, 0.3);">
-    <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Before You Book</span>
-        <h2 class="section-title">House Rules</h2>
+        <span class="section-tag">Guest Quest</span>
+        <h2 class="section-title">The Chanan Rules</h2>
+        <p style="font-size: 13px; color: var(--orange); margin-top: 10px; font-weight: 600;">← Swipe to reveal your missions →</p>
       </div>
-      <div class="rules-grid reveal">
-        <div class="rule-card">
-          <span class="rule-icon">Time</span>
-          <div>
-            <h4>Check-in / Check-out</h4>
-            <p>Check-in from 2:00 PM. Check-out by 11:00 AM. Late check-out by prior arrangement only.</p>
+      
+      <div class="rules-container-gamified reveal">
+        <!-- Arrival Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 1</span>
+            <div class="rule-status"></div>
           </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">Timely Check-in</span>
+            <h4>The Arrival Quest</h4>
+            <p>Unlock your stay between 2:00 PM and 11:00 AM. Early access requires a secret arrangement!</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">🔑</span>
         </div>
-        <div class="rule-card">
-          <span class="rule-icon">Quiet</span>
-          <div>
-            <h4>Quiet Hours</h4>
-            <p>Please respect quiet hours between 10:00 PM and 8:00 AM to ensure comfort for all residents.</p>
+
+        <!-- Zen Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 2</span>
+            <div class="rule-status"></div>
           </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">Quiet Nights</span>
+            <h4>The Zen Master</h4>
+            <p>Maintain peak tranquility between 10:00 PM and 8:00 AM. Your neighbors will thank you!</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">🧘</span>
         </div>
-        <div class="rule-card">
-          <span class="rule-icon">No</span>
-          <div>
-            <h4>No Smoking</h4>
-            <p>Strictly no smoking inside the unit. A designated smoking area is available outside the building.</p>
+
+        <!-- Fresh Air Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 3</span>
+            <div class="rule-status"></div>
           </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">Outdoor Smoking</span>
+            <h4>The Fresh Air Legend</h4>
+            <p>Keep the indoor air pristine. Our outdoor zones are perfect for high-altitude smoking.</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">☁️</span>
         </div>
-        <div class="rule-card">
-          <span class="rule-icon">No</span>
-          <div>
-            <h4>No Pets</h4>
-            <p>We regret that pets are not permitted in the suites at this time.</p>
+
+        <!-- Fur-Free Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 4</span>
+            <div class="rule-status"></div>
           </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">No Pets</span>
+            <h4>The Fur-Free Realm</h4>
+            <p>A sanctuary for humans only! We love pets, but they're taking a vacation elsewhere this time.</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">🐾</span>
         </div>
-        <div class="rule-card">
-          <span class="rule-icon">No</span>
-          <div>
-            <h4>No Parties or Events</h4>
-            <p>The suites are designed for peaceful stays. Parties and large gatherings are not permitted.</p>
+
+        <!-- Party Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 5</span>
+            <div class="rule-status"></div>
           </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">No Parties</span>
+            <h4>The Peace Protocol</h4>
+            <p>Quiet vibes only. Parties belong in the city; memories belong in our suites.</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">🥂</span>
         </div>
-        <div class="rule-card">
-          <span class="rule-icon">Care</span>
-          <div>
-            <h4>Leave it Tidy</h4>
-            <p>Please leave the unit in the same condition as you found it. A cleaning fee of KES 1,500 applies.</p>
+
+        <!-- Tidy Quest -->
+        <div class="rule-quest-card">
+          <div class="rule-quest-header">
+            <span class="rule-badge">Mission 6</span>
+            <div class="rule-status"></div>
           </div>
+          <div class="rule-quest-content">
+            <span class="rule-summary-badge">Stay Clean</span>
+            <h4>The Clean Sweep</h4>
+            <p>Leave the suite as glowing as you found it. Legendary guests leave zero traces!</p>
+            <div class="rule-progress-bar"><div class="rule-progress-fill"></div></div>
+          </div>
+          <span class="rule-icon-floating">✨</span>
         </div>
       </div>
     </div>
