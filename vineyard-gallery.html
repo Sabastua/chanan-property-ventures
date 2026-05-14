@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bedrock Suites Gallery | Chanan Property Ventures</title>
-  <meta name="description" content="View the full photo gallery for Bedrock Suites at Kunste, Nakuru.">
+  <title>Vineyard Luxury Homes Gallery | Chanan Property Ventures</title>
+  <meta name="description" content="View the full photo gallery for Vineyard Luxury Homes.">
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="images/LOGO.jpeg">
   <style>
     :root {
-      --bedrock-grey-bg: #F8FAFC;
+      --vineyard-grey-bg: #F8FAFC;
     }
     body { background-color: #E2E8F0; }
     .gallery-page { padding: 120px 0 80px; }
@@ -58,8 +58,8 @@
     </a>
     <ul class="nav-links">
       <li><a href="honeycomb.html">Honeycomb Suites</a></li>
-      <li><a href="bedrock.html" style="color:var(--orange)">Bedrock Suites</a></li>
-      <li><a href="vineyard.html">Vineyard Luxury</a></li>
+      <li><a href="bedrock.html">Bedrock Suites</a></li>
+      <li><a href="vineyard.html" style="color:var(--orange)">Vineyard Luxury</a></li>
     </ul>
     <a href="contact.html" class="nav-cta">Get In Touch</a>
     <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -77,9 +77,9 @@
 <section class="gallery-page">
   <div class="container">
     <div class="gallery-header reveal">
-      <a href="bedrock.html" style="color:var(--orange); display:inline-block; margin-bottom: 20px; font-weight:600; text-decoration:none;">← Back to Bedrock Suites</a>
-      <h1>Bedrock <span class="accent">Gallery</span></h1>
-      <p>Explore the sophisticated slate-toned interiors and modern residential architecture of Bedrock Suites at Kunste, Nakuru.</p>
+      <a href="vineyard.html" style="color:var(--orange); display:inline-block; margin-bottom: 20px; font-weight:600; text-decoration:none;">← Back to Vineyard Luxury Homes</a>
+      <h1>Vineyard <span class="accent">Gallery</span></h1>
+      <p>Explore the sophisticated grey-toned interiors and modern residential architecture of Vineyard Luxury Homes at Kingdom Point, Nakuru.</p>
     </div>
 
     <div class="full-grid reveal" id="galleryGrid">
@@ -110,22 +110,17 @@
 <script src="script.js"></script>
 <script>
   const images = [
-    "WhatsApp Image 2026-05-14 at 12.57.17 (1).jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.17 (2).jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.17.jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.18 (1).jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.18 (2).jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.18 (3).jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.18.jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.19 (1).jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.19 (2).jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.19.jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.20 (1).jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.20 (2).jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.20 (3).jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.20.jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.21 (1).jpeg",
-    "WhatsApp Image 2026-05-14 at 12.57.21.jpeg"
+    "DSC_0004.jpg", "DSC_0010.jpg", "DSC_0012.jpg", "DSC_0013.jpg", "DSC_0015.jpg",
+    "DSC_0022.jpg", "DSC_0024.jpg", "DSC_0027.jpg", "DSC_0029.jpg", "DSC_0035.jpg",
+    "DSC_0084.jpg", "DSC_0087.jpg", "DSC_0089.jpg", "DSC_0092.jpg", "DSC_0093.jpg",
+    "DSC_0094.jpg", "DSC_0096.jpg", "DSC_0097.jpg", "DSC_0098.jpg", "DSC_0100.jpg",
+    "DSC_0103.jpg", "DSC_0150.jpg", "DSC_0153.jpg", "DSC_0156.jpg", "DSC_0157.jpg",
+    "IMG_20260304_105657_595.jpg", "IMG_20260304_110307_650.jpg", "IMG_20260304_110330_354.jpg",
+    "IMG_20260306_142041_646.jpg", "IMG_20260306_142148_724.jpg", "IMG_20260306_142250_551.jpg",
+    "IMG_20260306_142352_660.jpg", "IMG_20260306_142526_772.jpg", "IMG_20260306_142538_617.jpg",
+    "IMG_20260306_142727_151.jpg", "IMG_20260306_142821_845.jpg", "IMG_20260306_142905_842.jpg",
+    "IMG_20260306_142912_157.jpg", "IMG_20260306_143140_184.jpg", "IMG_20260306_143222_661.jpg",
+    "IMG_20260306_143400_683.jpg", "IMG_20260306_143523_083.jpg"
   ];
 
   const galleryGrid = document.getElementById('galleryGrid');
@@ -140,8 +135,8 @@
     card.setAttribute('aria-label', 'Open photo');
 
     const el = document.createElement('img');
-    el.src = 'images/real bedrock images /' + img;
-    el.alt = 'Bedrock photo';
+    el.src = 'images/bedrock/' + img;
+    el.alt = 'Vineyard photo';
     el.loading = 'lazy';
 
     card.appendChild(el);
