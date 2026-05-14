@@ -514,7 +514,7 @@ section { padding: 100px 0; }
 }
 
 /* ===== PROPERTY CARDS ===== */
-.property-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 32px; }
+.property-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px; }
 
 .property-card {
   border-radius: var(--radius);
@@ -650,6 +650,33 @@ section { padding: 100px 0; }
 }
 .property-price { font-size: 24px; font-weight: 800; color: var(--orange); }
 .property-price small { font-size: 14px; color: var(--text-muted); font-weight: 400; }
+
+.btn-view {
+  padding: 10px 22px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+  box-shadow: var(--glass-shadow-soft);
+}
+
+.property-card:hover .btn-view {
+  background: var(--orange);
+  color: white;
+  border-color: var(--orange);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(232, 114, 42, 0.35);
+}
 
 /* ===== VINEYARD FEATURE ===== */
 .vineyard-section { position: relative; }
